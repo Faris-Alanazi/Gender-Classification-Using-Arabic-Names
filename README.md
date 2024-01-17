@@ -5,8 +5,7 @@
     <h1 align="center">GENDER-CLASSIFICATION-USING-ARABIC-NAMES</h1>
 </p>
 <p align="center">
-    <em>Error generating text for slogan: Client error '429 Too Many Requests' for url 'https://api.openai.com/v1/chat/completions'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429</em>
+    <em>Predict Gender By Analyzing The Arabic First Name</em>
 </p>
 <p align="center">
 	<img src="https://img.shields.io/github/license/Faris-Alanazi/Gender-Classification-Using-Arabic-Names?style=flat&color=0080ff" alt="license">
@@ -31,31 +30,18 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
 ## 🔗 Quick Links
 
 > - [📍 Overview](#-overview)
-> - [📦 Features](#-features)
 > - [📂 Repository Structure](#-repository-structure)
-> - [🧩 Modules](#-modules)
 > - [🚀 Getting Started](#-getting-started)
 >   - [⚙️ Installation](#️-installation)
 >   - [🤖 Running Gender-Classification-Using-Arabic-Names](#-running-Gender-Classification-Using-Arabic-Names)
->   - [🧪 Tests](#-tests)
-> - [🛠 Project Roadmap](#-project-roadmap)
+>   - [🥈 Run](#-tests)
 > - [🤝 Contributing](#-contributing)
-> - [📄 License](#-license)
-> - [👏 Acknowledgments](#-acknowledgments)
 
 ---
 
 ## 📍 Overview
 
-Error generating text for overview: Client error '429 Too Many Requests' for url 'https://api.openai.com/v1/chat/completions'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
-
----
-
-## 📦 Features
-
-Error generating text for features: Client error '429 Too Many Requests' for url 'https://api.openai.com/v1/chat/completions'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+The Gender-Classification-Using-Arabic-Names project utilizes machine learning to predict gender from Arabic names. Employing Jupyter Notebooks for preprocessing and modeling, the workflow includes cleaning the dataset, exploring data, and training classifiers. Valuable for applications in marketing, user personalization, and language research, the project provides a practical tool for gender inference in Arabic-speaking communities, demonstrating a culturally nuanced application of AI.
 
 ---
 
@@ -65,10 +51,12 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
 └── Gender-Classification-Using-Arabic-Names/
     ├── _1_Exploratory_Data_Analysis.ipynb
     ├── _2_Preporcessing.ipynb
-    ├── _3_LSTM_Model.ipynb
-    ├── _4_Xgboost.ipynb
+    ├── _3_BiLSTM_Model.ipynb
+    ├── _4_Xgboost_Model.ipynb
     ├── app.py
-    └── requirements.txt
+    ├── requirements.txt
+    └── saved_models
+        ├── XGBoost.bin
 ```
 
 ---
@@ -77,20 +65,14 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
 
 <details closed><summary>.</summary>
 
-| File                                                                                                                                                           | Summary                                                                                                                                                                                                                                          |
-| ---                                                                                                                                                            | ---                                                                                                                                                                                                                                              |
-| [_2_Preporcessing.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_2_Preporcessing.ipynb)                         | Error generating text for _2_Preporcessing.ipynb: Client error '429 Too Many Requests' for url 'https://api.openai.com/v1/chat/completions'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429             |
-| [_1_Exploratory_Data_Analysis.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_1_Exploratory_Data_Analysis.ipynb) | Error generating text for _1_Exploratory_Data_Analysis.ipynb: Client error '429 Too Many Requests' for url 'https://api.openai.com/v1/chat/completions'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429 |
-| [_3_LSTM_Model.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_3_LSTM_Model.ipynb)                               | Error generating text for _3_LSTM_Model.ipynb: Client error '429 Too Many Requests' for url 'https://api.openai.com/v1/chat/completions'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429                |
-| [_4_Xgboost.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_4_Xgboost.ipynb)                                     | Error generating text for _4_Xgboost.ipynb: Client error '429 Too Many Requests' for url 'https://api.openai.com/v1/chat/completions'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429                   |
-| [requirements.txt](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/requirements.txt)                                     | Error generating text for requirements.txt: Client error '429 Too Many Requests' for url 'https://api.openai.com/v1/chat/completions'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429                   |
-| [app.py](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/app.py)                                                         | Error generating text for app.py: Client error '429 Too Many Requests' for url 'https://api.openai.com/v1/chat/completions'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429                             |
+| File                                                                                                                                                           | Summary                                                                                                                                                                              |
+| ---                                                                                                                                                            | ---                                                                                                                                                                                  |
+| [_2_Preporcessing.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_2_Preporcessing.ipynb)                         | The `_2_Preporcessing.ipynb` conducts data cleaning and preparation for the gender classification models in the `Gender-Classification-Using-Arabic-Names` repository.               |
+| [_1_Exploratory_Data_Analysis.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_1_Exploratory_Data_Analysis.ipynb) | The code defines a component of the Gender-Classification-Using-Arabic-Names project, responsible for exploring and analyzing the dataset to inform further model development.       |
+| [_4_Xgboost_Model.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_4_Xgboost_Model.ipynb)                         | This function serves as a data loader, crucial for handling dataset fetching and preprocessing in the repository’s machine learning pipeline.                                        |
+| [_3_BiLSTM_Model.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_3_BiLSTM_Model.ipynb)                           | This code snippet acts as a generator within a larger system, central to data or content creation based on the repository's hierarchical structure.                                  |
+| [requirements.txt](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/requirements.txt)                                     | The `requirements.txt` specifies dependencies vital for the gender classification system, ensuring consistent environment setup for the Python-based ML pipeline using Arabic names. |
+| [app.py](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/app.py)                                                         | Web app interface for gender prediction from Arabic names using a pre-trained XGBoost model, with name preprocessing and feature extraction.                                         |
 
 </details>
 
@@ -132,21 +114,13 @@ Use the following command to run Gender-Classification-Using-Arabic-Names:
 jupyter nbconvert --execute notebook.ipynb
 ```
 
-### 🧪 Tests
+### 🥈 Run
 
-To execute tests, run:
+To execute run the streamlit Application, run:
 
 ```sh
-pytest notebook_test.py
+streamlit run app.py
 ```
-
----
-
-## 🛠 Project Roadmap
-
-- [X] `► INSERT-TASK-1`
-- [ ] `► INSERT-TASK-2`
-- [ ] `► ...`
 
 ---
 
@@ -184,18 +158,6 @@ Contributions are welcome! Here are several ways you can contribute:
 Once your PR is reviewed and approved, it will be merged into the main branch.
 
 </details>
-
----
-
-## 📄 License
-
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
-
----
-
-## 👏 Acknowledgments
-
-- List any resources, contributors, inspiration, etc. here.
 
 [**Return**](#-quick-links)
 
