@@ -56,9 +56,11 @@ the project provides a practical tool for gender inference using Arabic Names
     ├── _4_Xgboost_Model.ipynb
     ├── app.py
     ├── requirements.txt
-    └── saved_models
-        ├── XGBoost.bin
+    ├── saved_models
+    │   ├── XGBoost.bin
+    └── temp.ipynb
 ```
+
 
 ---
 
@@ -66,14 +68,15 @@ the project provides a practical tool for gender inference using Arabic Names
 
 <details closed><summary>.</summary>
 
-| File                                                                                                                                                           | Summary                                                                                                                                                                              |
-| ---                                                                                                                                                            | ---                                                                                                                                                                                  |
-| [_2_Preporcessing.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_2_Preporcessing.ipynb)                         | The `_2_Preporcessing.ipynb` conducts data cleaning and preparation for the gender classification models in the `Gender-Classification-Using-Arabic-Names` repository.               |
-| [_1_Exploratory_Data_Analysis.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_1_Exploratory_Data_Analysis.ipynb) | The code defines a component of the Gender-Classification-Using-Arabic-Names project, responsible for exploring and analyzing the dataset to inform further model development.       |
-| [_4_Xgboost_Model.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_4_Xgboost_Model.ipynb)                         | This function serves as a data loader, crucial for handling dataset fetching and preprocessing in the repository’s machine learning pipeline.                                        |
-| [_3_BiLSTM_Model.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_3_BiLSTM_Model.ipynb)                           | This code snippet acts as a generator within a larger system, central to data or content creation based on the repository's hierarchical structure.                                  |
-| [requirements.txt](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/requirements.txt)                                     | The `requirements.txt` specifies dependencies vital for the gender classification system, ensuring consistent environment setup for the Python-based ML pipeline using Arabic names. |
-| [app.py](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/app.py)                                                         | Web app interface for gender prediction from Arabic names using a pre-trained XGBoost model, with name preprocessing and feature extraction.                                         |
+| File                                                                                                                                                           | Summary                                                                                                                                                                                                                                                                                                                                    |
+| ---                                                                                                                                                            | ---                                                                                                                                                                                                                                                                                                                                        |
+| [_2_Preporcessing.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_2_Preporcessing.ipynb)                         | This preprocessing notebook enhances the gender classification dataset, transforming Arabic names into numerical features for ML models within the project's pipeline. It includes feature engineering to extract linguistic attributes, implements feature encoding for categorical data, and finalizes by storing the preprocessed data. |
+| [_1_Exploratory_Data_Analysis.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_1_Exploratory_Data_Analysis.ipynb) | This notebook conducts the initial data exploration and preprocessing for Arabic names gender classification, encompassing data loading, visualization, null handling, alphabet filtering, and dataset cleaning.                                                                                                                           |
+| [temp.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/temp.ipynb)                                                 | This code snippet is integral for determining gender classification within a larger system focused on identity analysis.                                                                                                                                                                                                                   |
+| [_4_Xgboost_Model.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_4_Xgboost_Model.ipynb)                         | The provided text is incomplete. Please provide the full repository structure or details of the code snippet for an accurate summary.                                                                                                                                                                                                      |
+| [_3_BiLSTM_Model.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_3_BiLSTM_Model.ipynb)                           | Assuming the provided information is incomplete:The snippet orchestrates a key component within the repository, interfacing with other modules to maintain cohesive functionality.                                                                                                                                                         |
+| [requirements.txt](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/requirements.txt)                                     | The `requirements.txt` file specifies dependencies for a web application that predicts gender from Arabic names using BiLSTM and XGBoost models, as part of the larger machine learning project.                                                                                                                                           |
+| [app.py](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/app.py)                                                         | The `app.py` serves as a Streamlit web interface for gender prediction using Arabic names, utilizing a pre-trained XGBoost model and pre-processing with tokenization and feature scaling.                                                                                                                                                 |
 
 </details>
 
@@ -81,11 +84,6 @@ the project provides a practical tool for gender inference using Arabic Names
 
 ## 🚀 Getting Started
 
-***Requirements***
-
-Ensure you have the following dependencies installed on your system:
-
-* **JupyterNotebook**: `version x.y.z`
 
 ### ⚙️ Installation
 
@@ -105,14 +103,6 @@ cd Gender-Classification-Using-Arabic-Names
 
 ```sh
 pip install -r requirements.txt
-```
-
-### 🤖 Running Gender-Classification-Using-Arabic-Names
-
-Use the following command to run Gender-Classification-Using-Arabic-Names:
-
-```sh
-jupyter nbconvert --execute notebook.ipynb
 ```
 
 ### 🥈 Run
