@@ -66,8 +66,6 @@ the project provides a practical tool for gender inference using Arabic Names
 
 ## 🧩 Modules
 
-<details>
-
 | File                                                                                                                                                           | Summary                                                                                                                                                                                                                                                                                                                                    |
 | ---                                                                                                                                                            | ---                                                                                                                                                                                                                                                                                                                                        |
 | [_2_Preporcessing.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_2_Preporcessing.ipynb)                         | This preprocessing notebook enhances the gender classification dataset, transforming Arabic names into numerical features for ML models within the project's pipeline. It includes feature engineering to extract linguistic attributes, implements feature encoding for categorical data, and finalizes by storing the preprocessed data. |
@@ -77,8 +75,6 @@ the project provides a practical tool for gender inference using Arabic Names
 | [_3_BiLSTM_Model.ipynb](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/_3_BiLSTM_Model.ipynb)                           | Assuming the provided information is incomplete:The snippet orchestrates a key component within the repository, interfacing with other modules to maintain cohesive functionality.                                                                                                                                                         |
 | [requirements.txt](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/requirements.txt)                                     | The `requirements.txt` file specifies dependencies for a web application that predicts gender from Arabic names using BiLSTM and XGBoost models, as part of the larger machine learning project.                                                                                                                                           |
 | [app.py](https://github.com/Faris-Alanazi/Gender-Classification-Using-Arabic-Names/blob/master/app.py)                                                         | The `app.py` serves as a Streamlit web interface for gender prediction using Arabic names, utilizing a pre-trained XGBoost model and pre-processing with tokenization and feature scaling.                                                                                                                                                 |
-
-</details>
 
 ---
 
