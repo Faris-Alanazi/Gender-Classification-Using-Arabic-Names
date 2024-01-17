@@ -41,7 +41,8 @@
 
 ## 📍 Overview
 
-The Gender-Classification-Using-Arabic-Names project utilizes machine learning to predict gender from Arabic names. Employing Jupyter Notebooks for preprocessing and modeling, the workflow includes cleaning the dataset, exploring data, and training classifiers. Valuable for applications in marketing, user personalization, and language research, the project provides a practical tool for gender inference in Arabic-speaking communities, demonstrating a culturally nuanced application of AI.
+The Gender-Classification-Using-Arabic-Names project utilizes machine learning to predict gender from Arabic names. Employing Jupyter Notebooks for preprocessing and modeling, the workflow includes cleaning the dataset, exploring data, and training classifiers.
+the project provides a practical tool for gender inference using Arabic Names
 
 ---
 
