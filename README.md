@@ -33,8 +33,7 @@
 > - [📂 Repository Structure](#-repository-structure)
 > - [🚀 Getting Started](#-getting-started)
 >   - [⚙️ Installation](#️-installation)
->   - [🤖 Running Gender-Classification-Using-Arabic-Names](#-running-Gender-Classification-Using-Arabic-Names)
->   - [🥈 Run](#-tests)
+>   - [🥈 Run](#-Run)
 > - [🤝 Contributing](#-contributing)
 
 ---
