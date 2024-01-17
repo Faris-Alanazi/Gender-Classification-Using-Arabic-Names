@@ -66,7 +66,7 @@ the project provides a practical tool for gender inference using Arabic Names
 
 ## 🧩 Modules
 
-<details closed><summary>.</summary>
+<details>
 
 | File                                                                                                                                                           | Summary                                                                                                                                                                                                                                                                                                                                    |
 | ---                                                                                                                                                            | ---                                                                                                                                                                                                                                                                                                                                        |
