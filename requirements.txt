@@ -9,3 +9,4 @@ scikit-learn==1.0.2
 matplotlib==3.7.4
 seaborn==0.13.1
 mlflow==2.9.2
+protobuf==3.20
