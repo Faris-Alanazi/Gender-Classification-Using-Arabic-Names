@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/461486716067717122/521f6dff755c400b977ad83a064ee0a9/artifacts
+deleted_time: 1706017610467
 end_time: 1706001522788
 entry_point_name: ''
 experiment_id: '461486716067717122'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 521f6dff755c400b977ad83a064ee0a9
 run_name: bald-moth-974
 run_uuid: 521f6dff755c400b977ad83a064ee0a9

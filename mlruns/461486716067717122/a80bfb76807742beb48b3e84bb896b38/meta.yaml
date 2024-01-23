@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/a80bfb76807742beb48b3e84bb896b38/artifacts
+end_time: 1706016633283
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: a80bfb76807742beb48b3e84bb896b38
+run_name: resilient-ray-43
+run_uuid: a80bfb76807742beb48b3e84bb896b38
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706016629855
+status: 3
+tags: []
+user_id: FarisAlanazi

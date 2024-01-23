@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/461486716067717122/e98ef2076cbc456eaa05ab195e52b27f/artifacts
+deleted_time: 1706017610466
 end_time: 1706012189687
 entry_point_name: ''
 experiment_id: '461486716067717122'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: e98ef2076cbc456eaa05ab195e52b27f
 run_name: blushing-crow-183
 run_uuid: e98ef2076cbc456eaa05ab195e52b27f

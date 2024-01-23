@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/461486716067717122/402f6d12fcdd410988e1b32453d139c7/artifacts
+deleted_time: 1706017643571
 end_time: 1705999000866
 entry_point_name: ''
 experiment_id: '461486716067717122'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 402f6d12fcdd410988e1b32453d139c7
 run_name: caring-sponge-518
 run_uuid: 402f6d12fcdd410988e1b32453d139c7

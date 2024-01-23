@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/461486716067717122/3fe616407a754f49aba99eb40c963eef/artifacts
+deleted_time: 1706017610468
 end_time: 1706012173235
 entry_point_name: ''
 experiment_id: '461486716067717122'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 3fe616407a754f49aba99eb40c963eef
 run_name: inquisitive-swan-154
 run_uuid: 3fe616407a754f49aba99eb40c963eef

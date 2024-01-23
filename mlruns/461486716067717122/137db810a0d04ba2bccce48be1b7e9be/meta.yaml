@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/461486716067717122/137db810a0d04ba2bccce48be1b7e9be/artifacts
+deleted_time: 1706017610469
 end_time: 1706001467136
 entry_point_name: ''
 experiment_id: '461486716067717122'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 137db810a0d04ba2bccce48be1b7e9be
 run_name: youthful-sloth-190
 run_uuid: 137db810a0d04ba2bccce48be1b7e9be
