@@ -16,7 +16,7 @@ vocab_size = 37  # Replace with the actual vocab size used during training
 
 # Load the trained model
 model = xgb.XGBClassifier()
-model.load_model('saved_models/XGBoost.bin')  # Adjust if you saved with a different filename
+model.load_model('saved_models/XGBoost_model_Acc_0.888_F1_0.925_Roc_0.933.bin')  # Adjust if you saved with a different filename
 
 # Load the scaler models
 scaler_first = joblib.load('saved_models/scaler_models/scaler_first_letter.pkl')
@@ -37,11 +37,16 @@ def create_features(name):
     first_letter_encoded_scaled = scaler_first.transform(first_letter_encoded.reshape(-1, 1))
     last_letter_encoded_scaled = scaler_last.transform(last_letter_encoded.reshape(-1, 1))
 
+    name_length = len(name)
+    
+    # Reshape name_length to match the dimensions of the other arrays
+    name_length = np.array([name_length]).reshape(-1, 1)
+
     # Tokenize and pad the name, making sure to pass it as a list
     sequences = tokenizer.texts_to_sequences([name])
     padded_sequences = pad_sequences(sequences, maxlen=max_name_length)
 
-    features = np.concatenate((padded_sequences, first_letter_encoded_scaled, last_letter_encoded_scaled),axis=1)
+    features = np.concatenate((padded_sequences, first_letter_encoded_scaled, last_letter_encoded_scaled,name_length),axis=1)
 
     return features
 
