@@ -110,21 +110,20 @@ def objective(trial):
         'objective': 'binary:logistic',
         'eval_metric': 'logloss',
         'use_label_encoder': False,
-        'lambda': trial.suggest_loguniform('lambda', 1e-8, 10.0),
-        'alpha': trial.suggest_loguniform('alpha', 1e-8, 10.0),
-        'colsample_bytree': trial.suggest_categorical('colsample_bytree', [0.6, 0.7, 0.8, 0.9, 1.0]),
-        'subsample': trial.suggest_categorical('subsample', [0.6, 0.7, 0.8, 0.9, 1.0]),
-        'learning_rate': trial.suggest_categorical('learning_rate', [0.008, 0.01, 0.02, 0.05, 0.1]),
-        'n_estimators': trial.suggest_categorical('n_estimators', [100, 200, 300, 400, 500]),
-        'max_depth': trial.suggest_categorical('max_depth', [5, 7, 9, 11, 13, 15]),
+        'lambda': trial.suggest_loguniform('lambda', 1e-8, 6.0),
+        'alpha': trial.suggest_loguniform('alpha', 1e-8, 3.0),
+        'colsample_bytree': trial.suggest_float('colsample_bytree', 0.5, 1.0),
+        'subsample': trial.suggest_float('subsample', 0.6, 1.0),
+        'learning_rate': trial.suggest_float('learning_rate', 0.01, 0.1),
+        'n_estimators': trial.suggest_int('n_estimators', 75, 220),
+        'max_depth': trial.suggest_int('max_depth', 7, 17),
         'min_child_weight': trial.suggest_int('min_child_weight', 1, 300),
         'gamma': trial.suggest_loguniform('gamma', 1e-8, 1.0),
-        'scale_pos_weight': trial.suggest_float('scale_pos_weight', 1, 100),
-        'early_stopping_rounds':trial.suggest_int('early_stopping_rounds', 10, 100)
+        'scale_pos_weight': trial.suggest_float('scale_pos_weight', 1, 20),
+        'early_stopping_rounds':trial.suggest_int('early_stopping_rounds', 15, 60)
     }
 
-   
- # Initialize XGBoost with hyperparameters
+    # Initialize XGBoost with hyperparameters
     xgb_model = xgb.XGBClassifier(**param)
 
     # Train the model with dynamic early stopping rounds
@@ -140,7 +139,7 @@ def objective(trial):
 
 # Create a study object and optimize the objective function
 study = optuna.create_study(direction='minimize')
-study.optimize(objective, n_trials=700);
+study.optimize(objective, n_trials=500);
 
 # Best hyperparameters
 print('Number of finished trials:', len(study.trials))
