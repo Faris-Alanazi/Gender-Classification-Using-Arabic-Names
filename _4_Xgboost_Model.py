@@ -18,7 +18,6 @@ import seaborn as sns
 
 warnings.filterwarnings('ignore')
 
-warnings.filterwarnings('ignore')
 
 # Load Data
 df = pd.read_pickle('data/dataset_after_preporcessing.pkl')
