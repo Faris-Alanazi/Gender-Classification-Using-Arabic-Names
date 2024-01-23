@@ -204,5 +204,6 @@ print(f"ROC AUC: {round(test_roc_auc, 3)}")
 print('-----------------------------------------------------------\n')
 
 if test_accuracy > 0.870 or test_f1 > 0.92:
-    xgb_model.save_model(f"saved_models/XGBoost Models/XGBoost_Acc_{round(test_accuracy,3)}_F1_{round(test_f1,3)}_Roc_{round(test_roc_auc,3)}.bin")
+    model_filename = f"saved_models/ExtraTrees_Models/ExtraTrees_Acc_{round(test_accuracy,3)}_F1_{round(test_f1,3)}_Roc_{round(test_roc_auc,3)}.joblib"
+    joblib.dump(model, model_filename)
     print("Model Saved!")
