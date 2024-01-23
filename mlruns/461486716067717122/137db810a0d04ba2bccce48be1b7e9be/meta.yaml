@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/137db810a0d04ba2bccce48be1b7e9be/artifacts
+end_time: 1706001467136
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: 137db810a0d04ba2bccce48be1b7e9be
+run_name: youthful-sloth-190
+run_uuid: 137db810a0d04ba2bccce48be1b7e9be
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706001467048
+status: 4
+tags: []
+user_id: FarisAlanazi
