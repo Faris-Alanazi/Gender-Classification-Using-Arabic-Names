@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/73439daee12643379861fa5509479378/artifacts
+end_time: 1706012289558
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: 73439daee12643379861fa5509479378
+run_name: learned-bat-655
+run_uuid: 73439daee12643379861fa5509479378
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706012282011
+status: 3
+tags: []
+user_id: FarisAlanazi

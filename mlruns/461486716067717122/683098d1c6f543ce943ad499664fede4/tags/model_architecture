@@ -1,0 +1,23 @@
+Model: "sequential_14"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_14 (Embedding)    (None, 20, 32)            1184      
+                                                                 
+ bidirectional_28 (Bidirecti  (None, 20, 256)          164864    
+ onal)                                                           
+                                                                 
+ dropout_28 (Dropout)        (None, 20, 256)           0         
+                                                                 
+ bidirectional_29 (Bidirecti  (None, 128)              164352    
+ onal)                                                           
+                                                                 
+ dropout_29 (Dropout)        (None, 128)               0         
+                                                                 
+ dense_14 (Dense)            (None, 1)                 129       
+                                                                 
+=================================================================
+Total params: 330,529
+Trainable params: 330,529
+Non-trainable params: 0
+_________________________________________________________________

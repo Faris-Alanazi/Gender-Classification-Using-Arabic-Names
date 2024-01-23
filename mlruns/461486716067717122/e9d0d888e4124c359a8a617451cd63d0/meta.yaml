@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/e9d0d888e4124c359a8a617451cd63d0/artifacts
+end_time: 1706012255921
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: e9d0d888e4124c359a8a617451cd63d0
+run_name: welcoming-sheep-286
+run_uuid: e9d0d888e4124c359a8a617451cd63d0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706012248159
+status: 4
+tags: []
+user_id: FarisAlanazi

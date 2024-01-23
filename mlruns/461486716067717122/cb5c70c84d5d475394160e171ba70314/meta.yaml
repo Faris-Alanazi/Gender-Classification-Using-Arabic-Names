@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/cb5c70c84d5d475394160e171ba70314/artifacts
+end_time: 1706012518057
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: cb5c70c84d5d475394160e171ba70314
+run_name: adaptable-perch-653
+run_uuid: cb5c70c84d5d475394160e171ba70314
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706012512944
+status: 3
+tags: []
+user_id: FarisAlanazi
