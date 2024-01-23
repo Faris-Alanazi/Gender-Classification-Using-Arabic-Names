@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/8b94ac741a274e24ad83e402336f5c02/artifacts
+end_time: 1706008681465
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: 8b94ac741a274e24ad83e402336f5c02
+run_name: whimsical-stoat-754
+run_uuid: 8b94ac741a274e24ad83e402336f5c02
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706008677589
+status: 3
+tags: []
+user_id: FarisAlanazi

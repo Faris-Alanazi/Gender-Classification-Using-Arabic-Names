@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/ea7662173ff84b63990132ac10ddff9f/artifacts
+end_time: 1706008363981
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: ea7662173ff84b63990132ac10ddff9f
+run_name: melodic-hen-648
+run_uuid: ea7662173ff84b63990132ac10ddff9f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706006949754
+status: 3
+tags: []
+user_id: FarisAlanazi

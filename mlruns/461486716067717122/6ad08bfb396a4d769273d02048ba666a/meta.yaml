@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/6ad08bfb396a4d769273d02048ba666a/artifacts
+end_time: 1706003312653
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: 6ad08bfb396a4d769273d02048ba666a
+run_name: sincere-ape-878
+run_uuid: 6ad08bfb396a4d769273d02048ba666a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706003309932
+status: 3
+tags: []
+user_id: FarisAlanazi

@@ -1,0 +1,25 @@
+Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_1 (Embedding)     (None, 20, 512)           18944     
+                                                                 
+ bidirectional_2 (Bidirectio  (None, 20, 256)          656384    
+ nal)                                                            
+                                                                 
+ dropout_2 (Dropout)         (None, 20, 256)           0         
+                                                                 
+ lstm_4 (LSTM)               (None, 20, 64)            82176     
+                                                                 
+ dropout_3 (Dropout)         (None, 20, 64)            0         
+                                                                 
+ bidirectional_3 (Bidirectio  (None, 256)              197632    
+ nal)                                                            
+                                                                 
+ dense_1 (Dense)             (None, 1)                 257       
+                                                                 
+=================================================================
+Total params: 955,393
+Trainable params: 955,393
+Non-trainable params: 0
+_________________________________________________________________

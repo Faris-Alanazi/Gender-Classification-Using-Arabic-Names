@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/d76d55dfab5e4763b9c5dffaee8a9741/artifacts
+end_time: 1706003008545
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: d76d55dfab5e4763b9c5dffaee8a9741
+run_name: gaudy-conch-512
+run_uuid: d76d55dfab5e4763b9c5dffaee8a9741
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706001969576
+status: 3
+tags: []
+user_id: FarisAlanazi
