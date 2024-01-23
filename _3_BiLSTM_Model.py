@@ -9,6 +9,7 @@ import optuna
 import warnings
 import mlflow
 import mlflow.keras
+import tensorflow as tf
 from mlflow.models.signature import infer_signature
 from keras.callbacks import EarlyStopping
 from tensorflow.keras.models import Sequential, Model
@@ -19,8 +20,24 @@ from tensorflow.keras.regularizers import l2
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score, confusion_matrix, precision_score, recall_score, roc_curve, auc
 
+
+policy = tf.keras.mixed_precision.Policy('mixed_float16')
+tf.keras.mixed_precision.set_global_policy(policy)
+
+# Configuring TensorFlow to use as much GPU as it needs
+gpus = tf.config.list_physical_devices('GPU')
+if gpus:
+    try:
+        # Set memory growth to True
+        for gpu in gpus:
+            tf.config.experimental.set_memory_growth(gpu, True)
+        print(len(gpus), "Physical GPUs available")
+    except RuntimeError as e:
+        print(e)
+
 # Adjusting warnings
 warnings.filterwarnings('ignore')
+
 # Load Data
 df = pd.read_pickle('data/dataset_after_preporcessing.pkl')
 df.head()
@@ -112,11 +129,11 @@ def lstm_objective(trial):
     # Hyperparameters to be tuned by Optuna for BiLSTM
     embedding_dim = trial.suggest_int('embedding_dim',64, 512)
     lstm_units = trial.suggest_int('lstm_units', 32, 256)
-    dropout_rate = trial.suggest_uniform('dropout_rate', 0.0, 0.5)
+    dropout_rate = trial.suggest_categorical('dropout_rate', [0.25, 0.5])
     l2_lambda = trial.suggest_loguniform('l2_reg', 1e-6, 1e-2)
-    batch_size = trial.suggest_int('batch_size', 16, 128)
+    batch_size = trial.suggest_categorical('batch_size', [16,32,64,128])
     # epochs = trial.suggest_int('epochs', 5, 50)
-    patience_for_early_stopping = trial.suggest_int('patience_for_early_stopping', 4, 9)
+    patience_for_early_stopping = trial.suggest_int('patience_for_early_stopping', 4, 11)
 
     # Define the model architecture using the hyperparameters
     model = Sequential()
@@ -127,11 +144,14 @@ def lstm_objective(trial):
 
     model.add(Dropout(dropout_rate))
 
-    model.add(Bidirectional(LSTM(lstm_units//2,kernel_regularizer=l2(l2_lambda))))
+    model.add(LSTM(lstm_units,return_sequences=True,kernel_regularizer=l2(l2_lambda)))
 
     model.add(Dropout(dropout_rate))
 
+    model.add(Bidirectional(LSTM(lstm_units,kernel_regularizer=l2(l2_lambda))))
+
     model.add(Dense(1, activation='sigmoid'))
+
 
     # Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
@@ -160,7 +180,7 @@ def lstm_objective(trial):
 
 # Create a study object and optimize the objective function
 study = optuna.create_study(direction='minimize')
-study.optimize(lstm_objective, n_trials=50)
+study.optimize(lstm_objective, n_trials=200)
 
 # Best hyperparameters
 print('Number of finished trials:', len(study.trials))
@@ -183,7 +203,10 @@ def get_model_summary(model):
 
 mlflow.set_tracking_uri("http://127.0.0.1:5000")
 mlflow.set_experiment("Gender Prediction Models Tracking")
+
+
 # MLflow tracking
+model = Sequential()
 with mlflow.start_run():
     # Log model parameters
     
@@ -198,7 +221,6 @@ with mlflow.start_run():
     mlflow.log_params(best_lstm_params)
 
     # Define the model architecture using the hyperparameters
-    model = Sequential()
 
     model.add(Embedding(input_dim=vocab_size, output_dim=best_lstm_params['embedding_dim'], input_length=total_features_shape))
 
@@ -206,9 +228,11 @@ with mlflow.start_run():
 
     model.add(Dropout(best_lstm_params['dropout_rate']))
 
-    model.add(Bidirectional(LSTM(best_lstm_params['lstm_units']//2,kernel_regularizer=l2(best_lstm_params['l2_reg']))))
+    model.add(LSTM(best_lstm_params['lstm_units'],return_sequences=True,kernel_regularizer=l2(best_lstm_params['l2_reg'])))
 
     model.add(Dropout(best_lstm_params['dropout_rate']))
+
+    model.add(Bidirectional(LSTM(best_lstm_params['lstm_units'],kernel_regularizer=l2(best_lstm_params['l2_reg']))))
 
     model.add(Dense(1, activation='sigmoid'))
 
@@ -302,5 +326,5 @@ print(f"Test Loss: {round(test_loss, 3)}")
 print('-----------------------------------------------------------')
 
 if test_accuracy > 0.870 or f1 > 0.92:
-    xgb_model.save_model(f"saved_models/BiLSTM Models/BiLSTM_Acc_{round(test_accuracy,3)}_F1_{round(f1,3)}_Roc_{round(roc_auc,3)}.h5")
+    model.save_model(f"saved_models/BiLSTM Models/BiLSTM_Acc_{round(test_accuracy,3)}_F1_{round(f1,3)}_Roc_{round(roc_auc,3)}.h5")
     print("model saved!")
