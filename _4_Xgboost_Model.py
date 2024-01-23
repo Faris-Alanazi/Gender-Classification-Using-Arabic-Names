@@ -9,16 +9,14 @@ import xgboost as xgb
 import mlflow
 import optuna
 from optuna.integration import XGBoostPruningCallback
-from keras.callbacks import EarlyStopping
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Embedding, LSTM, Dense, Dropout, Bidirectional
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.regularizers import l2
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, f1_score, confusion_matrix,precision_score, recall_score, roc_curve, auc, log_loss
+from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, precision_score, recall_score, roc_curve, auc, log_loss
 import seaborn as sns
-from sklearn.metrics import log_loss
+
+warnings.filterwarnings('ignore')
 
 warnings.filterwarnings('ignore')
 
@@ -142,7 +140,7 @@ def objective(trial):
 
 # Create a study object and optimize the objective function
 study = optuna.create_study(direction='minimize')
-study.optimize(objective, n_trials=79);
+study.optimize(objective, n_trials=700);
 
 # Best hyperparameters
 print('Number of finished trials:', len(study.trials))
@@ -236,4 +234,5 @@ print(f"ROC AUC: {round(roc_auc, 3)}")
 print('-----------------------------------------------------------\n')
 
 if test_accuracy > 0.870 or f1 > 0.92:
-    xgb_model.save_model(f"saved_models/XGBoost_model_Acc_{round(test_accuracy,3)}_F1_{round(f1,3)}_Roc_{round(roc_auc,3)}.bin")
+    xgb_model.save_model(f"saved_models/XGBoost_Acc_{round(test_accuracy,3)}_F1_{round(f1,3)}_Roc_{round(roc_auc,3)}.bin")
+    print("Model Saved!")
