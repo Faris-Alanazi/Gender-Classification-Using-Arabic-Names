@@ -110,13 +110,13 @@ total_features_shape = X_train.shape[1]
 
 def lstm_objective(trial):
     # Hyperparameters to be tuned by Optuna for BiLSTM
-    embedding_dim = trial.suggest_categorical('embedding_dim', [32, 64, 128, 256,512])
-    lstm_units = trial.suggest_categorical('lstm_units', [32, 64, 128, 256])
+    embedding_dim = trial.suggest_int('embedding_dim',64, 512)
+    lstm_units = trial.suggest_int('lstm_units', 32, 256)
     dropout_rate = trial.suggest_uniform('dropout_rate', 0.0, 0.5)
     l2_lambda = trial.suggest_loguniform('l2_reg', 1e-6, 1e-2)
-    batch_size = trial.suggest_categorical('batch_size', [16, 32, 64, 128])
+    batch_size = trial.suggest_int('batch_size', 16, 128)
     # epochs = trial.suggest_int('epochs', 5, 50)
-    patience_for_early_stopping = trial.suggest_int('patience_for_early_stopping', 5, 15)
+    patience_for_early_stopping = trial.suggest_int('patience_for_early_stopping', 4, 9)
 
     # Define the model architecture using the hyperparameters
     model = Sequential()
@@ -160,12 +160,13 @@ def lstm_objective(trial):
 
 # Create a study object and optimize the objective function
 study = optuna.create_study(direction='minimize')
-study.optimize(lstm_objective, n_trials=10)
+study.optimize(lstm_objective, n_trials=1)
 
 # Best hyperparameters
 print('Number of finished trials:', len(study.trials))
 print('Best trial:', study.best_trial.params)
 best_lstm_params = study.best_trial.params
+
 def get_model_summary(model):
     """
     Generates the summary of the given Keras model and returns it as a string.
