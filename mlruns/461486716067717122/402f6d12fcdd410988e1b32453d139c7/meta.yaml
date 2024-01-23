@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/402f6d12fcdd410988e1b32453d139c7/artifacts
+end_time: 1705999000866
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: 402f6d12fcdd410988e1b32453d139c7
+run_name: caring-sponge-518
+run_uuid: 402f6d12fcdd410988e1b32453d139c7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1705998997919
+status: 3
+tags: []
+user_id: FarisAlanazi
