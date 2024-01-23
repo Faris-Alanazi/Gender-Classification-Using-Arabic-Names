@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/3c41ba48d92c46efa02b94c9e55f6073/artifacts
+end_time: 1705997807053
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: 3c41ba48d92c46efa02b94c9e55f6073
+run_name: wistful-newt-674
+run_uuid: 3c41ba48d92c46efa02b94c9e55f6073
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1705997380577
+status: 3
+tags: []
+user_id: FarisAlanazi

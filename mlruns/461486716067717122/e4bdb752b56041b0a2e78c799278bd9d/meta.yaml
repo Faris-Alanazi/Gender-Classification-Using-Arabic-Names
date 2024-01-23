@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/e4bdb752b56041b0a2e78c799278bd9d/artifacts
+end_time: 1705997113542
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: e4bdb752b56041b0a2e78c799278bd9d
+run_name: crawling-fawn-499
+run_uuid: e4bdb752b56041b0a2e78c799278bd9d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1705996741448
+status: 3
+tags: []
+user_id: FarisAlanazi
