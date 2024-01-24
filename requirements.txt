@@ -11,3 +11,7 @@ seaborn==0.13.1
 mlflow==2.9.2
 # protobuf==3.20
 optuna==3.5.0
+
+
+# when training on GPU tf mustbe 2.10
+# if we want to throw it into prodcution we need tf 2.9 becase of the protobuf incompatibilty with streamlit
