@@ -232,5 +232,5 @@ print(f"ROC AUC: {round(roc_auc, 3)}")
 print('-----------------------------------------------------------\n')
 
 if test_accuracy > 0.870 or f1 > 0.92:
-    xgb_model.save_model(f"saved_models/XGBoost_Acc_{round(test_accuracy,3)}_F1_{round(f1,3)}_Roc_{round(roc_auc,3)}.bin")
+    xgb_model.save_model(f"saved_models/XGBoost Models/XGBoost_Acc_{round(test_accuracy,3)}_F1_{round(f1,3)}_Roc_{round(roc_auc,3)}.bin")
     print("Model Saved!")
