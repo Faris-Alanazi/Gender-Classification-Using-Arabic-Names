@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/93ede3e10b7e47d891f26827f822ad0d/artifacts
+deleted_time: 1706080197221
+end_time: 1706077028759
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: deleted
+run_id: 93ede3e10b7e47d891f26827f822ad0d
+run_name: lyrical-crow-24
+run_uuid: 93ede3e10b7e47d891f26827f822ad0d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706077009427
+status: 4
+tags: []
+user_id: FarisAlanazi
