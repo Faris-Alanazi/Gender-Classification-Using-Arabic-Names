@@ -180,7 +180,7 @@ def lstm_objective(trial):
 
 # Create a study object and optimize the objective function
 study = optuna.create_study(direction='minimize')
-study.optimize(lstm_objective, n_trials=200)
+study.optimize(lstm_objective, n_trials=100)
 
 # Best hyperparameters
 print('Number of finished trials:', len(study.trials))
