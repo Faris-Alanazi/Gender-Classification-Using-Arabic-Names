@@ -16,7 +16,7 @@ vocab_size = 37  # Replace with the actual vocab size used during training
 
 # Load the trained model
 model = xgb.XGBClassifier()
-model.load_model('saved_models/XGBoost_model_Acc_0.888_F1_0.925_Roc_0.933.bin')  # Adjust if you saved with a different filename
+model.load_model('saved_models/XGBoost_Acc_0.893_F1_0.928_Roc_0.932.bin')  # Adjust if you saved with a different filename
 
 # Load the scaler models
 scaler_first = joblib.load('saved_models/scaler_models/scaler_first_letter.pkl')
