@@ -165,7 +165,7 @@ def objective(trial):
 
 # Create a study object and optimize the objective function
 study = optuna.create_study(direction='minimize')
-study.optimize(objective, n_trials=1500);
+study.optimize(objective, n_trials=1);
 
 # Best hyperparameters
 print('Number of finished trials:', len(study.trials))
