@@ -4,6 +4,7 @@
 import joblib
 import numpy as np
 import pandas as pd
+import time
 import pickle
 import optuna
 import warnings
@@ -126,14 +127,16 @@ total_features_shape = X_train.shape[1]
 
 
 def lstm_objective(trial):
+    start_time = time.time()  # Start time measurement
+
     # Hyperparameters to be tuned by Optuna for BiLSTM
-    embedding_dim = trial.suggest_int('embedding_dim',64, 512)
-    lstm_units = trial.suggest_int('lstm_units', 32, 256)
-    dropout_rate = trial.suggest_categorical('dropout_rate', [0.25, 0.5])
-    l2_lambda = trial.suggest_loguniform('l2_reg', 1e-6, 1e-2)
-    batch_size = trial.suggest_categorical('batch_size', [16,32,64,128])
-    # epochs = trial.suggest_int('epochs', 5, 50)
-    patience_for_early_stopping = trial.suggest_int('patience_for_early_stopping', 4, 11)
+    embedding_dim = trial.suggest_int('embedding_dim', 64, 256)
+    lstm_units = trial.suggest_int('lstm_units', 32, 200)
+    dropout_rate = trial.suggest_categorical('dropout_rate', [0, 0.25, 0.5, 0.75])
+    l2_lambda = trial.suggest_loguniform('l2_reg', 1e-5, 1e-1)
+    batch_size = trial.suggest_categorical('batch_size', [32, 64, 128, 256])
+    epochs = trial.suggest_int('epochs', 10, 20)
+    patience_for_early_stopping = trial.suggest_int('patience_for_early_stopping', 4, 10)
 
     # Define the model architecture using the hyperparameters
     model = Sequential()
@@ -144,11 +147,7 @@ def lstm_objective(trial):
 
     model.add(Dropout(dropout_rate))
 
-    model.add(LSTM(lstm_units,return_sequences=True,kernel_regularizer=l2(l2_lambda)))
-
-    model.add(Dropout(dropout_rate))
-
-    model.add(Bidirectional(LSTM(lstm_units,kernel_regularizer=l2(l2_lambda))))
+    model.add(LSTM(lstm_units,kernel_regularizer=l2(l2_lambda)))
 
     model.add(Dense(1, activation='sigmoid'))
 
@@ -164,7 +163,7 @@ def lstm_objective(trial):
         X_train,
         y_train,
         validation_data=(X_val, y_val),
-        epochs=100,
+        epochs=epochs,
         batch_size=batch_size,
         callbacks=[early_stopping],
         verbose=0
@@ -176,13 +175,18 @@ def lstm_objective(trial):
     # Optionally, you can return additional information to be used later
     trial.set_user_attr('stopped_epoch', len(history.history['loss']))
 
+    end_time = time.time()  # End time measurement
+    elapsed_time = end_time - start_time  # Calculate elapsed time
+    print(f"\nExecution Time: {elapsed_time:.2f} seconds\n")
+
     return val_loss
 
 # Create a study object and optimize the objective function
 study = optuna.create_study(direction='minimize')
-study.optimize(lstm_objective, n_trials=100)
+study.optimize(lstm_objective, n_trials=200)
 
 # Best hyperparameters
+print()
 print('Number of finished trials:', len(study.trials))
 print('Best trial:', study.best_trial.params)
 best_lstm_params = study.best_trial.params
@@ -228,11 +232,7 @@ with mlflow.start_run():
 
     model.add(Dropout(best_lstm_params['dropout_rate']))
 
-    model.add(LSTM(best_lstm_params['lstm_units'],return_sequences=True,kernel_regularizer=l2(best_lstm_params['l2_reg'])))
-
-    model.add(Dropout(best_lstm_params['dropout_rate']))
-
-    model.add(Bidirectional(LSTM(best_lstm_params['lstm_units'],kernel_regularizer=l2(best_lstm_params['l2_reg']))))
+    model.add(LSTM(best_lstm_params['lstm_units'],kernel_regularizer=l2(best_lstm_params['l2_reg'])))
 
     model.add(Dense(1, activation='sigmoid'))
 
@@ -246,7 +246,7 @@ with mlflow.start_run():
         X_train,
         y_train,
         validation_data=(X_val, y_val),
-        epochs=100,
+        epochs=best_lstm_params['epochs'],
         batch_size=best_lstm_params['batch_size'],
         callbacks=[early_stopping],
         verbose=1
@@ -326,5 +326,5 @@ print(f"Test Loss: {round(test_loss, 3)}")
 print('-----------------------------------------------------------')
 
 if test_accuracy > 0.870 or f1 > 0.92:
-    model.save_model(f"saved_models/BiLSTM Models/BiLSTM_Acc_{round(test_accuracy,3)}_F1_{round(f1,3)}_Roc_{round(roc_auc,3)}.h5")
+    model.save(f"saved_models/BiLSTM Models/BiLSTM_Acc_{round(test_accuracy,3)}_F1_{round(f1,3)}_Roc_{round(roc_auc,3)}.h5")
     print("model saved!")

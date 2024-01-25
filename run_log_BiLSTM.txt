@@ -1,0 +1,427 @@
+2024-01-24 18:37:37.275475: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8100
+
+Execution Time: 10.175945281982422 seconds
+
+[I 2024-01-24 18:37:43,996] Trial 0 finished with value: 0.3910124897956848 and parameters: {'embedding_dim': 94, 'lstm_units': 96, 'dropout_rate': 0, 'l2_reg': 0.06326797603706066, 'batch_size': 256, 'epochs': 19, 'patience_for_early_stopping': 9}. Best is trial 0 with value: 0.3910124897956848.
+
+Execution Time: 28.853747129440308 seconds
+
+[I 2024-01-24 18:38:12,850] Trial 1 finished with value: 0.3432025611400604 and parameters: {'embedding_dim': 85, 'lstm_units': 187, 'dropout_rate': 0.25, 'l2_reg': 0.000330606382630916, 'batch_size': 32, 'epochs': 12, 'patience_for_early_stopping': 5}. Best is trial 1 with value: 0.3432025611400604.
+
+Execution Time: 13.068445205688477 seconds
+
+[I 2024-01-24 18:38:25,919] Trial 2 finished with value: 0.33340075612068176 and parameters: {'embedding_dim': 198, 'lstm_units': 37, 'dropout_rate': 0.25, 'l2_reg': 1.268198189477292e-05, 'batch_size': 128, 'epochs': 18, 'patience_for_early_stopping': 4}. Best is trial 2 with value: 0.33340075612068176.
+
+Execution Time: 15.140937805175781 seconds
+
+[I 2024-01-24 18:38:41,062] Trial 3 finished with value: 0.34778356552124023 and parameters: {'embedding_dim': 100, 'lstm_units': 80, 'dropout_rate': 0.5, 'l2_reg': 0.00019585380485552322, 'batch_size': 64, 'epochs': 12, 'patience_for_early_stopping': 10}. Best is trial 2 with value: 0.33340075612068176.
+
+Execution Time: 12.858190059661865 seconds
+
+[I 2024-01-24 18:38:53,922] Trial 4 finished with value: 0.3892861008644104 and parameters: {'embedding_dim': 125, 'lstm_units': 133, 'dropout_rate': 0.5, 'l2_reg': 0.04762347435936896, 'batch_size': 128, 'epochs': 19, 'patience_for_early_stopping': 6}. Best is trial 2 with value: 0.33340075612068176.
+
+Execution Time: 27.047866344451904 seconds
+
+[I 2024-01-24 18:39:20,969] Trial 5 finished with value: 0.33387625217437744 and parameters: {'embedding_dim': 221, 'lstm_units': 132, 'dropout_rate': 0.5, 'l2_reg': 4.88639767708472e-05, 'batch_size': 32, 'epochs': 12, 'patience_for_early_stopping': 10}. Best is trial 2 with value: 0.33340075612068176.
+
+Execution Time: 11.842570781707764 seconds
+
+[I 2024-01-24 18:39:32,812] Trial 6 finished with value: 0.3413621187210083 and parameters: {'embedding_dim': 115, 'lstm_units': 138, 'dropout_rate': 0.75, 'l2_reg': 1.4428039798637537e-05, 'batch_size': 128, 'epochs': 16, 'patience_for_early_stopping': 7}. Best is trial 2 with value: 0.33340075612068176.
+
+Execution Time: 29.649487495422363 seconds
+
+[I 2024-01-24 18:40:02,463] Trial 7 finished with value: 0.3780905306339264 and parameters: {'embedding_dim': 80, 'lstm_units': 52, 'dropout_rate': 0.25, 'l2_reg': 0.00688156396868524, 'batch_size': 32, 'epochs': 14, 'patience_for_early_stopping': 5}. Best is trial 2 with value: 0.33340075612068176.
+
+Execution Time: 7.242668867111206 seconds
+
+[I 2024-01-24 18:40:09,706] Trial 8 finished with value: 0.3820607364177704 and parameters: {'embedding_dim': 148, 'lstm_units': 161, 'dropout_rate': 0, 'l2_reg': 0.0027986342896313687, 'batch_size': 256, 'epochs': 14, 'patience_for_early_stopping': 4}. Best is trial 2 with value: 0.33340075612068176.
+
+Execution Time: 11.21330976486206 seconds
+
+[I 2024-01-24 18:40:20,919] Trial 9 finished with value: 0.38526904582977295 and parameters: {'embedding_dim': 174, 'lstm_units': 160, 'dropout_rate': 0.75, 'l2_reg': 0.012570471688754973, 'batch_size': 128, 'epochs': 16, 'patience_for_early_stopping': 6}. Best is trial 2 with value: 0.33340075612068176.
+
+Execution Time: 22.906643629074097 seconds
+
+[I 2024-01-24 18:40:43,826] Trial 10 finished with value: 0.3167223334312439 and parameters: {'embedding_dim': 254, 'lstm_units': 39, 'dropout_rate': 0.25, 'l2_reg': 1.9537647019081426e-05, 'batch_size': 64, 'epochs': 20, 'patience_for_early_stopping': 8}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 20.18798017501831 seconds
+
+[I 2024-01-24 18:41:04,015] Trial 11 finished with value: 0.3253079056739807 and parameters: {'embedding_dim': 250, 'lstm_units': 32, 'dropout_rate': 0.25, 'l2_reg': 1.0738245177859243e-05, 'batch_size': 64, 'epochs': 18, 'patience_for_early_stopping': 8}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 22.094074487686157 seconds
+
+[I 2024-01-24 18:41:26,110] Trial 12 finished with value: 0.33526673913002014 and parameters: {'embedding_dim': 250, 'lstm_units': 64, 'dropout_rate': 0.25, 'l2_reg': 6.89961258560071e-05, 'batch_size': 64, 'epochs': 20, 'patience_for_early_stopping': 8}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 19.95485234260559 seconds
+
+[I 2024-01-24 18:41:46,065] Trial 13 finished with value: 0.33918866515159607 and parameters: {'embedding_dim': 248, 'lstm_units': 33, 'dropout_rate': 0.25, 'l2_reg': 5.089365550116673e-05, 'batch_size': 64, 'epochs': 17, 'patience_for_early_stopping': 8}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 22.604422569274902 seconds
+
+[I 2024-01-24 18:42:08,670] Trial 14 finished with value: 0.3429328203201294 and parameters: {'embedding_dim': 220, 'lstm_units': 96, 'dropout_rate': 0.25, 'l2_reg': 0.0005810955271722886, 'batch_size': 64, 'epochs': 20, 'patience_for_early_stopping': 8}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 13.06301474571228 seconds
+
+[I 2024-01-24 18:42:21,735] Trial 15 finished with value: 0.3316945731639862 and parameters: {'embedding_dim': 223, 'lstm_units': 69, 'dropout_rate': 0.25, 'l2_reg': 1.4689511975446568e-05, 'batch_size': 64, 'epochs': 10, 'patience_for_early_stopping': 9}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 20.790631771087646 seconds
+
+[I 2024-01-24 18:42:42,526] Trial 16 finished with value: 0.3362988829612732 and parameters: {'embedding_dim': 184, 'lstm_units': 47, 'dropout_rate': 0.25, 'l2_reg': 0.00011976113299906881, 'batch_size': 64, 'epochs': 18, 'patience_for_early_stopping': 7}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 21.560608863830566 seconds
+
+[I 2024-01-24 18:43:04,088] Trial 17 finished with value: 0.3549734354019165 and parameters: {'embedding_dim': 253, 'lstm_units': 89, 'dropout_rate': 0.75, 'l2_reg': 0.0014597258026439058, 'batch_size': 64, 'epochs': 18, 'patience_for_early_stopping': 9}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 22.358575582504272 seconds
+
+[I 2024-01-24 18:43:26,448] Trial 18 finished with value: 0.325773149728775 and parameters: {'embedding_dim': 201, 'lstm_units': 57, 'dropout_rate': 0, 'l2_reg': 2.334581224598116e-05, 'batch_size': 64, 'epochs': 20, 'patience_for_early_stopping': 8}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 7.87155294418335 seconds
+
+[I 2024-01-24 18:43:34,320] Trial 19 finished with value: 0.3537597954273224 and parameters: {'embedding_dim': 152, 'lstm_units': 111, 'dropout_rate': 0.25, 'l2_reg': 3.5664346745611224e-05, 'batch_size': 256, 'epochs': 16, 'patience_for_early_stopping': 7}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 20.66554570198059 seconds
+
+[I 2024-01-24 18:43:54,987] Trial 20 finished with value: 0.3454655408859253 and parameters: {'embedding_dim': 232, 'lstm_units': 33, 'dropout_rate': 0.25, 'l2_reg': 0.00014228304097803528, 'batch_size': 64, 'epochs': 17, 'patience_for_early_stopping': 9}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 22.749377727508545 seconds
+
+[I 2024-01-24 18:44:17,738] Trial 21 finished with value: 0.3318677544593811 and parameters: {'embedding_dim': 208, 'lstm_units': 60, 'dropout_rate': 0, 'l2_reg': 2.5850850516245358e-05, 'batch_size': 64, 'epochs': 20, 'patience_for_early_stopping': 8}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 21.832155466079712 seconds
+
+[I 2024-01-24 18:44:39,571] Trial 22 finished with value: 0.3318314254283905 and parameters: {'embedding_dim': 237, 'lstm_units': 48, 'dropout_rate': 0, 'l2_reg': 2.5037983029138882e-05, 'batch_size': 64, 'epochs': 19, 'patience_for_early_stopping': 7}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 22.770903825759888 seconds
+
+[I 2024-01-24 18:45:02,342] Trial 23 finished with value: 0.3247036337852478 and parameters: {'embedding_dim': 199, 'lstm_units': 74, 'dropout_rate': 0, 'l2_reg': 1.005514163387206e-05, 'batch_size': 64, 'epochs': 20, 'patience_for_early_stopping': 8}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 21.088115215301514 seconds
+
+[I 2024-01-24 18:45:23,432] Trial 24 finished with value: 0.3329773247241974 and parameters: {'embedding_dim': 181, 'lstm_units': 75, 'dropout_rate': 0, 'l2_reg': 1.0735954254710952e-05, 'batch_size': 64, 'epochs': 19, 'patience_for_early_stopping': 6}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 20.836410522460938 seconds
+
+[I 2024-01-24 18:45:44,269] Trial 25 finished with value: 0.32851898670196533 and parameters: {'embedding_dim': 235, 'lstm_units': 46, 'dropout_rate': 0, 'l2_reg': 7.999694847174252e-05, 'batch_size': 64, 'epochs': 18, 'patience_for_early_stopping': 9}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 20.101861715316772 seconds
+
+[I 2024-01-24 18:46:04,371] Trial 26 finished with value: 0.3324209451675415 and parameters: {'embedding_dim': 210, 'lstm_units': 73, 'dropout_rate': 0.5, 'l2_reg': 1.0403701945151454e-05, 'batch_size': 64, 'epochs': 17, 'patience_for_early_stopping': 8}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 8.597497940063477 seconds
+
+[I 2024-01-24 18:46:12,969] Trial 27 finished with value: 0.3625462055206299 and parameters: {'embedding_dim': 256, 'lstm_units': 87, 'dropout_rate': 0.75, 'l2_reg': 0.0002725093744355506, 'batch_size': 256, 'epochs': 20, 'patience_for_early_stopping': 10}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 41.10115838050842 seconds
+
+[I 2024-01-24 18:46:54,070] Trial 28 finished with value: 0.32588231563568115 and parameters: {'embedding_dim': 192, 'lstm_units': 107, 'dropout_rate': 0.25, 'l2_reg': 2.7783725343835106e-05, 'batch_size': 32, 'epochs': 19, 'patience_for_early_stopping': 7}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 8.36401653289795 seconds
+
+[I 2024-01-24 18:47:02,435] Trial 29 finished with value: 0.36416441202163696 and parameters: {'embedding_dim': 166, 'lstm_units': 100, 'dropout_rate': 0, 'l2_reg': 0.0005111598435964531, 'batch_size': 256, 'epochs': 19, 'patience_for_early_stopping': 9}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 17.48709726333618 seconds
+
+[I 2024-01-24 18:47:19,923] Trial 30 finished with value: 0.38898470997810364 and parameters: {'embedding_dim': 240, 'lstm_units': 41, 'dropout_rate': 0, 'l2_reg': 0.062215429707347523, 'batch_size': 64, 'epochs': 15, 'patience_for_early_stopping': 8}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 22.29446816444397 seconds
+
+[I 2024-01-24 18:47:42,217] Trial 31 finished with value: 0.3286248743534088 and parameters: {'embedding_dim': 209, 'lstm_units': 55, 'dropout_rate': 0, 'l2_reg': 2.1255686963827368e-05, 'batch_size': 64, 'epochs': 20, 'patience_for_early_stopping': 8}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 22.96615695953369 seconds
+
+[I 2024-01-24 18:48:05,184] Trial 32 finished with value: 0.32998982071876526 and parameters: {'embedding_dim': 135, 'lstm_units': 58, 'dropout_rate': 0, 'l2_reg': 3.9967728958655874e-05, 'batch_size': 64, 'epochs': 20, 'patience_for_early_stopping': 9}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 22.326539993286133 seconds
+
+[I 2024-01-24 18:48:27,511] Trial 33 finished with value: 0.33017653226852417 and parameters: {'embedding_dim': 197, 'lstm_units': 39, 'dropout_rate': 0, 'l2_reg': 2.050831612953568e-05, 'batch_size': 64, 'epochs': 18, 'patience_for_early_stopping': 7}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 24.64869499206543 seconds
+
+[I 2024-01-24 18:48:52,160] Trial 34 finished with value: 0.3274722099304199 and parameters: {'embedding_dim': 228, 'lstm_units': 63, 'dropout_rate': 0.25, 'l2_reg': 8.532521886921953e-05, 'batch_size': 64, 'epochs': 20, 'patience_for_early_stopping': 8}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 29.638901472091675 seconds
+
+[I 2024-01-24 18:49:21,800] Trial 35 finished with value: 0.3407248556613922 and parameters: {'embedding_dim': 67, 'lstm_units': 83, 'dropout_rate': 0, 'l2_reg': 1.7580625371295975e-05, 'batch_size': 32, 'epochs': 19, 'patience_for_early_stopping': 6}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 13.909427404403687 seconds
+
+[I 2024-01-24 18:49:35,711] Trial 36 finished with value: 0.33359000086784363 and parameters: {'embedding_dim': 214, 'lstm_units': 190, 'dropout_rate': 0.5, 'l2_reg': 5.172858773554463e-05, 'batch_size': 128, 'epochs': 19, 'patience_for_early_stopping': 9}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 20.069530725479126 seconds
+
+[I 2024-01-24 18:49:55,781] Trial 37 finished with value: 0.32816317677497864 and parameters: {'embedding_dim': 241, 'lstm_units': 32, 'dropout_rate': 0.25, 'l2_reg': 1.0066938219710435e-05, 'batch_size': 64, 'epochs': 17, 'patience_for_early_stopping': 8}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 23.030065298080444 seconds
+
+[I 2024-01-24 18:50:18,812] Trial 38 finished with value: 0.3331340551376343 and parameters: {'embedding_dim': 197, 'lstm_units': 122, 'dropout_rate': 0.5, 'l2_reg': 0.00014395779720209723, 'batch_size': 64, 'epochs': 18, 'patience_for_early_stopping': 10}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 14.490519762039185 seconds
+
+[I 2024-01-24 18:50:33,303] Trial 39 finished with value: 0.3876820504665375 and parameters: {'embedding_dim': 163, 'lstm_units': 200, 'dropout_rate': 0, 'l2_reg': 0.022878985959447592, 'batch_size': 128, 'epochs': 20, 'patience_for_early_stopping': 7}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 30.83636164665222 seconds
+
+[I 2024-01-24 18:51:04,141] Trial 40 finished with value: 0.3429934084415436 and parameters: {'embedding_dim': 103, 'lstm_units': 43, 'dropout_rate': 0.75, 'l2_reg': 3.6003909410139974e-05, 'batch_size': 32, 'epochs': 13, 'patience_for_early_stopping': 8}. Best is trial 10 with value: 0.3167223334312439.
+
+Execution Time: 41.49308776855469 seconds
+
+[I 2024-01-24 18:51:45,634] Trial 41 finished with value: 0.31447264552116394 and parameters: {'embedding_dim': 193, 'lstm_units': 108, 'dropout_rate': 0.25, 'l2_reg': 2.337543330683755e-05, 'batch_size': 32, 'epochs': 19, 'patience_for_early_stopping': 7}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 41.64611101150513 seconds
+
+[I 2024-01-24 18:52:27,282] Trial 42 finished with value: 0.32569006085395813 and parameters: {'embedding_dim': 176, 'lstm_units': 53, 'dropout_rate': 0.25, 'l2_reg': 1.3974073353064534e-05, 'batch_size': 32, 'epochs': 19, 'patience_for_early_stopping': 7}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 43.088287591934204 seconds
+
+[I 2024-01-24 18:53:10,370] Trial 43 finished with value: 0.3224777281284332 and parameters: {'embedding_dim': 172, 'lstm_units': 146, 'dropout_rate': 0.25, 'l2_reg': 1.567499975956289e-05, 'batch_size': 32, 'epochs': 19, 'patience_for_early_stopping': 6}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 32.20587229728699 seconds
+
+[I 2024-01-24 18:53:42,577] Trial 44 finished with value: 0.32311639189720154 and parameters: {'embedding_dim': 148, 'lstm_units': 152, 'dropout_rate': 0.25, 'l2_reg': 1.6998795664851167e-05, 'batch_size': 32, 'epochs': 18, 'patience_for_early_stopping': 5}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 43.873777866363525 seconds
+
+[I 2024-01-24 18:54:26,451] Trial 45 finished with value: 0.3267335891723633 and parameters: {'embedding_dim': 127, 'lstm_units': 154, 'dropout_rate': 0.25, 'l2_reg': 6.207155088247273e-05, 'batch_size': 32, 'epochs': 19, 'patience_for_early_stopping': 4}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 41.34713077545166 seconds
+
+[I 2024-01-24 18:55:07,800] Trial 46 finished with value: 0.3189381957054138 and parameters: {'embedding_dim': 144, 'lstm_units': 141, 'dropout_rate': 0.25, 'l2_reg': 1.571290328450815e-05, 'batch_size': 32, 'epochs': 18, 'patience_for_early_stopping': 5}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 35.81578016281128 seconds
+
+[I 2024-01-24 18:55:43,617] Trial 47 finished with value: 0.3266696333885193 and parameters: {'embedding_dim': 142, 'lstm_units': 146, 'dropout_rate': 0.25, 'l2_reg': 3.514166202900342e-05, 'batch_size': 32, 'epochs': 16, 'patience_for_early_stopping': 5}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 38.72541666030884 seconds
+
+[I 2024-01-24 18:56:22,342] Trial 48 finished with value: 0.32337966561317444 and parameters: {'embedding_dim': 115, 'lstm_units': 126, 'dropout_rate': 0.25, 'l2_reg': 0.00010331359682479173, 'batch_size': 32, 'epochs': 17, 'patience_for_early_stopping': 5}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 33.54608130455017 seconds
+
+[I 2024-01-24 18:56:55,890] Trial 49 finished with value: 0.3282333016395569 and parameters: {'embedding_dim': 156, 'lstm_units': 170, 'dropout_rate': 0.25, 'l2_reg': 0.00024068225406251263, 'batch_size': 32, 'epochs': 15, 'patience_for_early_stopping': 6}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 23.934022188186646 seconds
+
+[I 2024-01-24 18:57:19,824] Trial 50 finished with value: 0.3632126748561859 and parameters: {'embedding_dim': 140, 'lstm_units': 141, 'dropout_rate': 0.25, 'l2_reg': 0.0015558403377960808, 'batch_size': 32, 'epochs': 10, 'patience_for_early_stopping': 4}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 41.12511444091797 seconds
+
+[I 2024-01-24 18:58:00,949] Trial 51 finished with value: 0.3240147829055786 and parameters: {'embedding_dim': 109, 'lstm_units': 129, 'dropout_rate': 0.25, 'l2_reg': 0.00010179479424611619, 'batch_size': 32, 'epochs': 18, 'patience_for_early_stopping': 5}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 39.19427275657654 seconds
+
+[I 2024-01-24 18:58:40,145] Trial 52 finished with value: 0.32186293601989746 and parameters: {'embedding_dim': 123, 'lstm_units': 174, 'dropout_rate': 0.25, 'l2_reg': 1.8036571585765018e-05, 'batch_size': 32, 'epochs': 17, 'patience_for_early_stopping': 5}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 42.078057289123535 seconds
+
+[I 2024-01-24 18:59:22,224] Trial 53 finished with value: 0.3201245665550232 and parameters: {'embedding_dim': 124, 'lstm_units': 165, 'dropout_rate': 0.25, 'l2_reg': 1.9804658269305773e-05, 'batch_size': 32, 'epochs': 18, 'patience_for_early_stopping': 5}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 42.107714891433716 seconds
+
+[I 2024-01-24 19:00:04,332] Trial 54 finished with value: 0.31599077582359314 and parameters: {'embedding_dim': 89, 'lstm_units': 171, 'dropout_rate': 0.25, 'l2_reg': 1.5908389498106403e-05, 'batch_size': 32, 'epochs': 17, 'patience_for_early_stopping': 6}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 37.704214334487915 seconds
+
+[I 2024-01-24 19:00:42,037] Trial 55 finished with value: 0.3261943757534027 and parameters: {'embedding_dim': 89, 'lstm_units': 174, 'dropout_rate': 0.25, 'l2_reg': 4.7669047406662153e-05, 'batch_size': 32, 'epochs': 16, 'patience_for_early_stopping': 5}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 39.24395227432251 seconds
+
+[I 2024-01-24 19:01:21,281] Trial 56 finished with value: 0.3593243360519409 and parameters: {'embedding_dim': 123, 'lstm_units': 172, 'dropout_rate': 0.25, 'l2_reg': 0.004459571194541123, 'batch_size': 32, 'epochs': 17, 'patience_for_early_stopping': 6}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 39.47263717651367 seconds
+
+[I 2024-01-24 19:02:00,755] Trial 57 finished with value: 0.3296336531639099 and parameters: {'embedding_dim': 98, 'lstm_units': 179, 'dropout_rate': 0.25, 'l2_reg': 2.4777606434474323e-05, 'batch_size': 32, 'epochs': 17, 'patience_for_early_stopping': 5}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 28.14736294746399 seconds
+
+[I 2024-01-24 19:02:28,903] Trial 58 finished with value: 0.33298227190971375 and parameters: {'embedding_dim': 131, 'lstm_units': 164, 'dropout_rate': 0.25, 'l2_reg': 3.344766118558401e-05, 'batch_size': 32, 'epochs': 18, 'patience_for_early_stopping': 4}. Best is trial 41 with value: 0.31447264552116394.
+
+Execution Time: 37.14905023574829 seconds
+
+[I 2024-01-24 19:03:06,053] Trial 59 finished with value: 0.31208670139312744 and parameters: {'embedding_dim': 72, 'lstm_units': 186, 'dropout_rate': 0.25, 'l2_reg': 1.5427058988971178e-05, 'batch_size': 32, 'epochs': 16, 'patience_for_early_stopping': 6}. Best is trial 59 with value: 0.31208670139312744.
+
+Execution Time: 35.66061568260193 seconds
+
+[I 2024-01-24 19:03:41,714] Trial 60 finished with value: 0.32468363642692566 and parameters: {'embedding_dim': 85, 'lstm_units': 184, 'dropout_rate': 0.25, 'l2_reg': 5.812016526152297e-05, 'batch_size': 32, 'epochs': 16, 'patience_for_early_stopping': 6}. Best is trial 59 with value: 0.31208670139312744.
+
+Execution Time: 41.859583139419556 seconds
+
+[I 2024-01-24 19:04:23,575] Trial 61 finished with value: 0.3296102285385132 and parameters: {'embedding_dim': 73, 'lstm_units': 193, 'dropout_rate': 0.25, 'l2_reg': 1.380376510326488e-05, 'batch_size': 32, 'epochs': 16, 'patience_for_early_stopping': 6}. Best is trial 59 with value: 0.31208670139312744.
+
+Execution Time: 45.0901403427124 seconds
+
+[I 2024-01-24 19:05:08,665] Trial 62 finished with value: 0.3217112421989441 and parameters: {'embedding_dim': 76, 'lstm_units': 181, 'dropout_rate': 0.25, 'l2_reg': 1.892993378937487e-05, 'batch_size': 32, 'epochs': 17, 'patience_for_early_stopping': 5}. Best is trial 59 with value: 0.31208670139312744.
+
+Execution Time: 37.19017672538757 seconds
+
+[I 2024-01-24 19:05:45,856] Trial 63 finished with value: 0.33165693283081055 and parameters: {'embedding_dim': 78, 'lstm_units': 182, 'dropout_rate': 0.25, 'l2_reg': 2.584775632699474e-05, 'batch_size': 32, 'epochs': 15, 'patience_for_early_stopping': 5}. Best is trial 59 with value: 0.31208670139312744.
+
+Execution Time: 7.943378686904907 seconds
+
+[I 2024-01-24 19:05:53,801] Trial 64 finished with value: 0.3604162931442261 and parameters: {'embedding_dim': 64, 'lstm_units': 196, 'dropout_rate': 0.25, 'l2_reg': 1.369320225524639e-05, 'batch_size': 256, 'epochs': 16, 'patience_for_early_stopping': 4}. Best is trial 59 with value: 0.31208670139312744.
+
+Execution Time: 34.78405261039734 seconds
+
+[I 2024-01-24 19:06:28,585] Trial 65 finished with value: 0.33052799105644226 and parameters: {'embedding_dim': 90, 'lstm_units': 164, 'dropout_rate': 0.75, 'l2_reg': 3.117564951038547e-05, 'batch_size': 32, 'epochs': 18, 'patience_for_early_stopping': 5}. Best is trial 59 with value: 0.31208670139312744.
+
+Execution Time: 9.728138446807861 seconds
+
+[I 2024-01-24 19:06:38,314] Trial 66 finished with value: 0.35406243801116943 and parameters: {'embedding_dim': 76, 'lstm_units': 154, 'dropout_rate': 0.25, 'l2_reg': 4.3739570716226064e-05, 'batch_size': 128, 'epochs': 11, 'patience_for_early_stopping': 6}. Best is trial 59 with value: 0.31208670139312744.
+
+Execution Time: 39.49992489814758 seconds
+
+[I 2024-01-24 19:07:17,815] Trial 67 finished with value: 0.32351988554000854 and parameters: {'embedding_dim': 70, 'lstm_units': 188, 'dropout_rate': 0.25, 'l2_reg': 2.05601480303657e-05, 'batch_size': 32, 'epochs': 17, 'patience_for_early_stopping': 7}. Best is trial 59 with value: 0.31208670139312744.
+
+Execution Time: 36.7618134021759 seconds
+
+[I 2024-01-24 19:07:54,577] Trial 68 finished with value: 0.32458144426345825 and parameters: {'embedding_dim': 81, 'lstm_units': 135, 'dropout_rate': 0.5, 'l2_reg': 1.2602679757473968e-05, 'batch_size': 32, 'epochs': 15, 'patience_for_early_stopping': 6}. Best is trial 59 with value: 0.31208670139312744.
+
+Execution Time: 38.08930206298828 seconds
+
+[I 2024-01-24 19:08:32,667] Trial 69 finished with value: 0.3268115520477295 and parameters: {'embedding_dim': 102, 'lstm_units': 168, 'dropout_rate': 0.25, 'l2_reg': 7.007330473224025e-05, 'batch_size': 32, 'epochs': 18, 'patience_for_early_stopping': 5}. Best is trial 59 with value: 0.31208670139312744.
+
+Execution Time: 7.710361957550049 seconds
+
+[I 2024-01-24 19:08:40,377] Trial 70 finished with value: 0.36124998331069946 and parameters: {'embedding_dim': 95, 'lstm_units': 178, 'dropout_rate': 0.25, 'l2_reg': 2.2427121523639425e-05, 'batch_size': 256, 'epochs': 14, 'patience_for_early_stopping': 6}. Best is trial 59 with value: 0.31208670139312744.
+
+Execution Time: 37.792627811431885 seconds
+
+[I 2024-01-24 19:09:18,170] Trial 71 finished with value: 0.3163298964500427 and parameters: {'embedding_dim': 118, 'lstm_units': 158, 'dropout_rate': 0.25, 'l2_reg': 1.7030627128276258e-05, 'batch_size': 32, 'epochs': 17, 'patience_for_early_stopping': 5}. Best is trial 59 with value: 0.31208670139312744.
+
+Execution Time: 40.2974591255188 seconds
+
+[I 2024-01-24 19:09:58,470] Trial 72 finished with value: 0.32332801818847656 and parameters: {'embedding_dim': 105, 'lstm_units': 159, 'dropout_rate': 0.25, 'l2_reg': 1.8533815007723537e-05, 'batch_size': 32, 'epochs': 17, 'patience_for_early_stopping': 5}. Best is trial 59 with value: 0.31208670139312744.
+
+Execution Time: 33.08309078216553 seconds
+
+[I 2024-01-24 19:10:31,553] Trial 73 finished with value: 0.3294098377227783 and parameters: {'embedding_dim': 115, 'lstm_units': 117, 'dropout_rate': 0.25, 'l2_reg': 2.754958222977365e-05, 'batch_size': 32, 'epochs': 18, 'patience_for_early_stopping': 4}. Best is trial 59 with value: 0.31208670139312744.
+
+Execution Time: 39.01227617263794 seconds
+
+[I 2024-01-24 19:11:10,565] Trial 74 finished with value: 0.3229106664657593 and parameters: {'embedding_dim': 88, 'lstm_units': 158, 'dropout_rate': 0.25, 'l2_reg': 1.001515755786877e-05, 'batch_size': 32, 'epochs': 16, 'patience_for_early_stopping': 5}. Best is trial 59 with value: 0.31208670139312744.
+
+Execution Time: 40.87907552719116 seconds
+
+[I 2024-01-24 19:11:51,445] Trial 75 finished with value: 0.31169942021369934 and parameters: {'embedding_dim': 114, 'lstm_units': 165, 'dropout_rate': 0.25, 'l2_reg': 1.3807299728701678e-05, 'batch_size': 32, 'epochs': 17, 'patience_for_early_stopping': 7}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 13.965100526809692 seconds
+
+[I 2024-01-24 19:12:05,410] Trial 76 finished with value: 0.34567177295684814 and parameters: {'embedding_dim': 109, 'lstm_units': 147, 'dropout_rate': 0.75, 'l2_reg': 1.3410674851766283e-05, 'batch_size': 128, 'epochs': 18, 'patience_for_early_stopping': 7}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 47.27114915847778 seconds
+
+[I 2024-01-24 19:12:52,683] Trial 77 finished with value: 0.3361164629459381 and parameters: {'embedding_dim': 115, 'lstm_units': 163, 'dropout_rate': 0.25, 'l2_reg': 4.0596446006222333e-05, 'batch_size': 32, 'epochs': 19, 'patience_for_early_stopping': 7}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 37.98270606994629 seconds
+
+[I 2024-01-24 19:13:30,666] Trial 78 finished with value: 0.32293763756752014 and parameters: {'embedding_dim': 138, 'lstm_units': 167, 'dropout_rate': 0.25, 'l2_reg': 1.258781392882156e-05, 'batch_size': 32, 'epochs': 16, 'patience_for_early_stopping': 7}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 44.15636992454529 seconds
+
+[I 2024-01-24 19:14:14,823] Trial 79 finished with value: 0.3245791792869568 and parameters: {'embedding_dim': 145, 'lstm_units': 150, 'dropout_rate': 0.5, 'l2_reg': 3.0257400083542856e-05, 'batch_size': 32, 'epochs': 19, 'patience_for_early_stopping': 6}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 38.28124499320984 seconds
+
+[I 2024-01-24 19:14:53,104] Trial 80 finished with value: 0.33668291568756104 and parameters: {'embedding_dim': 131, 'lstm_units': 140, 'dropout_rate': 0.25, 'l2_reg': 0.0005559422062743729, 'batch_size': 32, 'epochs': 17, 'patience_for_early_stopping': 7}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 40.39228320121765 seconds
+
+[I 2024-01-24 19:15:33,496] Trial 81 finished with value: 0.3260330855846405 and parameters: {'embedding_dim': 95, 'lstm_units': 178, 'dropout_rate': 0.25, 'l2_reg': 1.6743008241800853e-05, 'batch_size': 32, 'epochs': 17, 'patience_for_early_stopping': 5}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 39.26083731651306 seconds
+
+[I 2024-01-24 19:16:12,759] Trial 82 finished with value: 0.3250923752784729 and parameters: {'embedding_dim': 121, 'lstm_units': 184, 'dropout_rate': 0.25, 'l2_reg': 2.0951265943786703e-05, 'batch_size': 32, 'epochs': 17, 'patience_for_early_stopping': 5}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 39.06566286087036 seconds
+
+[I 2024-01-24 19:16:51,825] Trial 83 finished with value: 0.3267958164215088 and parameters: {'embedding_dim': 82, 'lstm_units': 93, 'dropout_rate': 0.25, 'l2_reg': 1.718653496655428e-05, 'batch_size': 32, 'epochs': 17, 'patience_for_early_stopping': 6}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 41.38623046875 seconds
+
+[I 2024-01-24 19:17:33,212] Trial 84 finished with value: 0.3237999379634857 and parameters: {'embedding_dim': 188, 'lstm_units': 159, 'dropout_rate': 0.25, 'l2_reg': 2.3118703734476974e-05, 'batch_size': 32, 'epochs': 18, 'patience_for_early_stopping': 7}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 8.475179195404053 seconds
+
+[I 2024-01-24 19:17:41,687] Trial 85 finished with value: 0.34898078441619873 and parameters: {'embedding_dim': 110, 'lstm_units': 191, 'dropout_rate': 0.25, 'l2_reg': 1.2828380989598227e-05, 'batch_size': 256, 'epochs': 17, 'patience_for_early_stopping': 4}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 37.09437346458435 seconds
+
+[I 2024-01-24 19:18:18,783] Trial 86 finished with value: 0.33658847212791443 and parameters: {'embedding_dim': 119, 'lstm_units': 175, 'dropout_rate': 0.25, 'l2_reg': 3.0242331563359006e-05, 'batch_size': 32, 'epochs': 18, 'patience_for_early_stopping': 5}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 34.65925145149231 seconds
+
+[I 2024-01-24 19:18:53,444] Trial 87 finished with value: 0.32138577103614807 and parameters: {'embedding_dim': 153, 'lstm_units': 168, 'dropout_rate': 0.25, 'l2_reg': 4.178061929440674e-05, 'batch_size': 32, 'epochs': 16, 'patience_for_early_stopping': 6}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 12.5970618724823 seconds
+
+[I 2024-01-24 19:19:06,041] Trial 88 finished with value: 0.341644823551178 and parameters: {'embedding_dim': 158, 'lstm_units': 108, 'dropout_rate': 0.25, 'l2_reg': 4.703648395383334e-05, 'batch_size': 128, 'epochs': 16, 'patience_for_early_stopping': 6}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 43.35130500793457 seconds
+
+[I 2024-01-24 19:19:49,392] Trial 89 finished with value: 0.3463035225868225 and parameters: {'embedding_dim': 166, 'lstm_units': 168, 'dropout_rate': 0.75, 'l2_reg': 0.0008229837128715211, 'batch_size': 32, 'epochs': 20, 'patience_for_early_stopping': 6}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 36.62826085090637 seconds
+
+[I 2024-01-24 19:20:26,021] Trial 90 finished with value: 0.37864190340042114 and parameters: {'embedding_dim': 154, 'lstm_units': 156, 'dropout_rate': 0.25, 'l2_reg': 0.032765954349598926, 'batch_size': 32, 'epochs': 16, 'patience_for_early_stopping': 7}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 36.93738389015198 seconds
+
+[I 2024-01-24 19:21:02,958] Trial 91 finished with value: 0.32702162861824036 and parameters: {'embedding_dim': 152, 'lstm_units': 185, 'dropout_rate': 0.25, 'l2_reg': 1.808070531560949e-05, 'batch_size': 32, 'epochs': 15, 'patience_for_early_stopping': 5}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 36.853843688964844 seconds
+
+[I 2024-01-24 19:21:39,813] Trial 92 finished with value: 0.3208860158920288 and parameters: {'embedding_dim': 146, 'lstm_units': 170, 'dropout_rate': 0.25, 'l2_reg': 1.152140317085929e-05, 'batch_size': 32, 'epochs': 17, 'patience_for_early_stopping': 6}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 35.72935724258423 seconds
+
+[I 2024-01-24 19:22:15,542] Trial 93 finished with value: 0.32480138540267944 and parameters: {'embedding_dim': 130, 'lstm_units': 165, 'dropout_rate': 0.25, 'l2_reg': 1.1587391525747476e-05, 'batch_size': 32, 'epochs': 19, 'patience_for_early_stopping': 6}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 36.40692591667175 seconds
+
+[I 2024-01-24 19:22:51,950] Trial 94 finished with value: 0.3234880566596985 and parameters: {'embedding_dim': 148, 'lstm_units': 171, 'dropout_rate': 0.25, 'l2_reg': 1.4764163381611743e-05, 'batch_size': 32, 'epochs': 16, 'patience_for_early_stopping': 6}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 40.75752019882202 seconds
+
+[I 2024-01-24 19:23:32,709] Trial 95 finished with value: 0.319408655166626 and parameters: {'embedding_dim': 133, 'lstm_units': 150, 'dropout_rate': 0.25, 'l2_reg': 3.805416020470126e-05, 'batch_size': 32, 'epochs': 18, 'patience_for_early_stopping': 7}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 40.17099952697754 seconds
+
+[I 2024-01-24 19:24:12,881] Trial 96 finished with value: 0.32178547978401184 and parameters: {'embedding_dim': 126, 'lstm_units': 143, 'dropout_rate': 0.25, 'l2_reg': 2.5515132149803103e-05, 'batch_size': 32, 'epochs': 18, 'patience_for_early_stopping': 7}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 42.61786413192749 seconds
+
+[I 2024-01-24 19:24:55,500] Trial 97 finished with value: 0.3195117115974426 and parameters: {'embedding_dim': 135, 'lstm_units': 150, 'dropout_rate': 0.5, 'l2_reg': 1.5158337039928243e-05, 'batch_size': 32, 'epochs': 19, 'patience_for_early_stopping': 7}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 42.3921000957489 seconds
+
+[I 2024-01-24 19:25:37,893] Trial 98 finished with value: 0.3157826066017151 and parameters: {'embedding_dim': 141, 'lstm_units': 151, 'dropout_rate': 0.5, 'l2_reg': 3.4757599026296854e-05, 'batch_size': 32, 'epochs': 19, 'patience_for_early_stopping': 7}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 23.369628429412842 seconds
+
+[I 2024-01-24 19:26:01,262] Trial 99 finished with value: 0.3250786066055298 and parameters: {'embedding_dim': 133, 'lstm_units': 134, 'dropout_rate': 0.5, 'l2_reg': 5.610658635541051e-05, 'batch_size': 64, 'epochs': 19, 'patience_for_early_stopping': 7}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 43.34316897392273 seconds
+
+[I 2024-01-24 19:26:44,608] Trial 100 finished with value: 0.3198349177837372 and parameters: {'embedding_dim': 141, 'lstm_units': 148, 'dropout_rate': 0.5, 'l2_reg': 3.544569139936995e-05, 'batch_size': 32, 'epochs': 20, 'patience_for_early_stopping': 7}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 47.27444243431091 seconds
+
+[I 2024-01-24 19:27:31,882] Trial 101 finished with value: 0.3255813717842102 and parameters: {'embedding_dim': 137, 'lstm_units': 137, 'dropout_rate': 0.5, 'l2_reg': 3.5562816219435e-05, 'batch_size': 32, 'epochs': 20, 'patience_for_early_stopping': 7}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 41.95470714569092 seconds
+
+[I 2024-01-24 19:28:13,837] Trial 102 finished with value: 0.32972419261932373 and parameters: {'embedding_dim': 245, 'lstm_units': 150, 'dropout_rate': 0.5, 'l2_reg': 1.5622773521829008e-05, 'batch_size': 32, 'epochs': 20, 'patience_for_early_stopping': 7}. Best is trial 75 with value: 0.31169942021369934.
+
+Execution Time: 41.24624538421631 seconds
+
+[I 2024-01-24 19:28:55,083] Trial 103 finished with value: 0.31401634216308594 and parameters: {'embedding_dim': 144, 'lstm_units': 144, 'dropout_rate': 0.5, 'l2_reg': 2.8811872050152785e-05, 'batch_size': 32, 'epochs': 19, 'patience_for_early_stopping': 8}. Best is trial 75 with value: 0.31169942021369934.
+
+
+
+
+
+
+
+
+
+
