@@ -1,10 +1,12 @@
 # python=3.8
 # conda env name: gender_pred_env
 # Packages
+import time
 import joblib
 import numpy as np
 import pandas as pd
 import warnings
+import tensorflow as tf
 import xgboost as xgb
 import mlflow
 import optuna
@@ -16,8 +18,22 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, precision_score, recall_score, roc_curve, auc, log_loss
 import seaborn as sns
 
-warnings.filterwarnings('ignore')
+policy = tf.keras.mixed_precision.Policy('mixed_float16')
+tf.keras.mixed_precision.set_global_policy(policy)
 
+# Configuring TensorFlow to use as much GPU as it needs
+gpus = tf.config.list_physical_devices('GPU')
+if gpus:
+    try:
+        # Set memory growth to True
+        for gpu in gpus:
+            tf.config.experimental.set_memory_growth(gpu, True)
+        print(len(gpus), "Physical GPUs available")
+    except RuntimeError as e:
+        print(e)
+
+
+warnings.filterwarnings('ignore')
 
 # Load Data
 df = pd.read_pickle('data/dataset_after_preporcessing.pkl')
@@ -30,15 +46,15 @@ tokenizer = Tokenizer(num_words=vocab_size, char_level=True)
 tokenizer.fit_on_texts(df['name'])
 sequences = tokenizer.texts_to_sequences(df['name'])
 padded_sequences = pad_sequences(sequences, maxlen=max_name_length)
+# Reverse each name in the padded sequences
+name_reversed = np.array([seq[::-1] for seq in padded_sequences])
+
 first_letter = df['name'].apply(lambda x: x[0])
 last_letter = df['name'].apply(lambda x: x[-1])
 
 first_letter_encoded = np.array([ord(char) for char in first_letter])
 last_letter_encoded = np.array([ord(char) for char in last_letter])
 
-max_unicode_value_first = np.max(first_letter_encoded)
-max_unicode_value_last = np.max(last_letter_encoded)
-max_unicode_value = max(max_unicode_value_first, max_unicode_value_last)
 # Load the scaler models
 scaler_first = joblib.load('saved_models/scaler_models/scaler_first_letter.pkl')
 scaler_last = joblib.load('saved_models/scaler_models/scaler_last_letter.pkl')
@@ -46,9 +62,10 @@ scaler_last = joblib.load('saved_models/scaler_models/scaler_last_letter.pkl')
 # Transform the new data using the loaded scalers
 first_letter_encoded_scaled = scaler_first.transform(first_letter_encoded.reshape(-1, 1))
 last_letter_encoded_scaled = scaler_last.transform(last_letter_encoded.reshape(-1, 1))
+
 y = df['sex'].values
 name_length = df['name_length'].values
-X = list(zip(padded_sequences, first_letter_encoded_scaled, last_letter_encoded_scaled, name_length))
+X = list(zip(padded_sequences, name_reversed, first_letter_encoded_scaled, last_letter_encoded_scaled, name_length))
 
 # Define the size for the test and validation sets as percentages
 test_size_percentage = 0.1
@@ -73,22 +90,25 @@ print(f"Validation set size: {len(X_val)}, Labels: {len(y_val)}")
 print(f"Test set size: {len(X_test)}, Labels: {len(y_test)}")
 
 # Unpack the training data into separate arrays for each input
-name_train, first_letter_train, last_letter_train, length_train = zip(*X_train)
-name_val, first_letter_val, last_letter_val, length_val = zip(*X_val)
-name_test, first_letter_test, last_letter_test, length_test = zip(*X_test)
+name_train, name_reversed_train, first_letter_train, last_letter_train, length_train = zip(*X_train)
+name_val, name_reversed_val, first_letter_val, last_letter_val, length_val = zip(*X_val)
+name_test, name_reversed_test, first_letter_test, last_letter_test, length_test = zip(*X_test)
 
 # Convert tuples to numpy arrays
 name_train = np.array(name_train)
+name_reversed_train = np.array(name_reversed_train)
 first_letter_train = np.array(first_letter_train)
 last_letter_train = np.array(last_letter_train)
 length_train = np.array(length_train)
 
 name_val = np.array(name_val)
+name_reversed_val = np.array(name_reversed_val)
 first_letter_val = np.array(first_letter_val)
 last_letter_val = np.array(last_letter_val)
 length_val = np.array(length_val)
 
 name_test = np.array(name_test)
+name_reversed_test = np.array(name_reversed_test)
 first_letter_test = np.array(first_letter_test)
 last_letter_test = np.array(last_letter_test)
 length_test = np.array(length_test)
@@ -99,11 +119,14 @@ length_val = length_val.reshape(-1, 1)
 length_test = length_test.reshape(-1, 1)
 
 # Concatenate the features
-X_train = np.concatenate([name_train, first_letter_train, last_letter_train, length_train], axis=1)
-X_val = np.concatenate([name_val, first_letter_val, last_letter_val, length_val], axis=1)
-X_test = np.concatenate([name_test, first_letter_test, last_letter_test, length_test], axis=1)
+X_train = np.concatenate([name_train, name_reversed_train, first_letter_train, last_letter_train, length_train], axis=1)
+X_val = np.concatenate([name_val, name_reversed_val, first_letter_val, last_letter_val, length_val], axis=1)
+X_test = np.concatenate([name_test,name_reversed_test ,first_letter_test, last_letter_test, length_test], axis=1)
 
 def objective(trial):
+
+    start_time = time.time()  # Start time measurement
+
     # Hyperparameters to be tuned by Optuna
     param = {
         'objective': 'binary:logistic',
@@ -134,11 +157,15 @@ def objective(trial):
     preds = xgb_model.predict_proba(X_val)[:, 1]
     log_loss_val = log_loss(y_val, preds)
 
+    end_time = time.time()  # End time measurement
+    elapsed_time = end_time - start_time  # Calculate elapsed time
+    print(f"\nExecution Time: {elapsed_time:.2f} seconds\n")
+
     return log_loss_val
 
 # Create a study object and optimize the objective function
 study = optuna.create_study(direction='minimize')
-study.optimize(objective, n_trials=500);
+study.optimize(objective, n_trials=1500);
 
 # Best hyperparameters
 print('Number of finished trials:', len(study.trials))

@@ -16,9 +16,9 @@ def calculate_execution_times(file_path):
     print(f"Average Execution Time: {average_time} seconds")
 
     # Calculate the number of trials for 7 hours (7 hours * 3600 seconds/hour)
-    total_seconds = 7 * 3600
+    total_seconds = 0.5 * 3600
     number_of_trials = total_seconds / average_time
-    print(f"Number of Trials to Reach 7 Hours: {int(number_of_trials)}")
+    print(f"{int(number_of_trials)}")
 
 # Replace 'path_to_your_log_file.txt' with the path to your log file
-calculate_execution_times('temp.txt')
+calculate_execution_times('run_log_Xgboost.txt')
