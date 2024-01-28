@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/b43faca2359e4caf888a1fbe31d57e82/artifacts
+end_time: 1706449166905
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: b43faca2359e4caf888a1fbe31d57e82
+run_name: glamorous-koi-428
+run_uuid: b43faca2359e4caf888a1fbe31d57e82
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706449163836
+status: 3
+tags: []
+user_id: FarisAlanazi
