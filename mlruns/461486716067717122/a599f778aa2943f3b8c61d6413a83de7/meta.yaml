@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/a599f778aa2943f3b8c61d6413a83de7/artifacts
+end_time: 1706599419028
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: a599f778aa2943f3b8c61d6413a83de7
+run_name: capable-horse-984
+run_uuid: a599f778aa2943f3b8c61d6413a83de7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706599415559
+status: 3
+tags: []
+user_id: FarisAlanazi
