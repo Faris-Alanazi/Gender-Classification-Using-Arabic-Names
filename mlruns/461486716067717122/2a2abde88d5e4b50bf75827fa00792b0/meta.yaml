@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/2a2abde88d5e4b50bf75827fa00792b0/artifacts
+end_time: 1706448658763
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: 2a2abde88d5e4b50bf75827fa00792b0
+run_name: casual-shrike-447
+run_uuid: 2a2abde88d5e4b50bf75827fa00792b0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706448655868
+status: 3
+tags: []
+user_id: FarisAlanazi

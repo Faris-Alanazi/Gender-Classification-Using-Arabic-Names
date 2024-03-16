@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/9ed863579cf546eba1ea2c7251b46f75/artifacts
+end_time: 1706448627438
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: 9ed863579cf546eba1ea2c7251b46f75
+run_name: calm-cow-683
+run_uuid: 9ed863579cf546eba1ea2c7251b46f75
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706448623997
+status: 3
+tags: []
+user_id: FarisAlanazi

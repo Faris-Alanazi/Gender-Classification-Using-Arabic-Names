@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/672eb5b8e9e8489b829da3fe0b99ceaa/artifacts
+end_time: 1706448521424
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: 672eb5b8e9e8489b829da3fe0b99ceaa
+run_name: rare-gnat-896
+run_uuid: 672eb5b8e9e8489b829da3fe0b99ceaa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706448517721
+status: 3
+tags: []
+user_id: FarisAlanazi

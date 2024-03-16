@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/f67e4ef1e42c45fba2fcc74ba8e8d417/artifacts
+end_time: 1706424280630
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: f67e4ef1e42c45fba2fcc74ba8e8d417
+run_name: exultant-kit-931
+run_uuid: f67e4ef1e42c45fba2fcc74ba8e8d417
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706424277798
+status: 3
+tags: []
+user_id: FarisAlanazi
