@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/461486716067717122/cdf3723f08014bfa88ce18ed3e43289b/artifacts
+end_time: 1706279807654
+entry_point_name: ''
+experiment_id: '461486716067717122'
+lifecycle_stage: active
+run_id: cdf3723f08014bfa88ce18ed3e43289b
+run_name: useful-robin-559
+run_uuid: cdf3723f08014bfa88ce18ed3e43289b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706279805330
+status: 3
+tags: []
+user_id: pandans
