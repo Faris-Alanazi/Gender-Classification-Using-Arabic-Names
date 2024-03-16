@@ -63,9 +63,69 @@ scaler_last = joblib.load('saved_models/scaler_models/scaler_last_letter.pkl')
 first_letter_encoded_scaled = scaler_first.transform(first_letter_encoded.reshape(-1, 1))
 last_letter_encoded_scaled = scaler_last.transform(last_letter_encoded.reshape(-1, 1))
 
+# y = df['sex'].values
+# name_length = df['name_length'].values
+# X = list(zip(padded_sequences, name_reversed, first_letter_encoded_scaled, last_letter_encoded_scaled, name_length))
+
+# # Define the size for the test and validation sets as percentages
+# test_size_percentage = 0.1
+# validation_size_percentage = 0.1
+
+# # Calculate the actual sizes for the test and validation sets
+# total_size = test_size_percentage + validation_size_percentage
+# test_size_actual = test_size_percentage / total_size
+# validation_size_actual = validation_size_percentage / total_size
+
+# train_size_percentage = 1 - total_size
+
+# # First split: Separate out the training data and the remaining data
+# X_train, X_remaining, y_train, y_remaining = train_test_split(X, y, test_size=total_size, random_state=11)
+
+# # Second split: Separate the remaining data into validation and test sets
+# X_val, X_test, y_val, y_test = train_test_split(X_remaining, y_remaining, test_size=test_size_actual, random_state=11)
+
+# # Print the number of samples in the training, validation, and test sets
+# print(f"Training set size: {len(X_train)}, Labels: {len(y_train)}")
+# print(f"Validation set size: {len(X_val)}, Labels: {len(y_val)}")
+# print(f"Test set size: {len(X_test)}, Labels: {len(y_test)}")
+
+# # Unpack the training data into separate arrays for each input
+# name_train, name_reversed_train, first_letter_train, last_letter_train, length_train = zip(*X_train)
+# name_val, name_reversed_val, first_letter_val, last_letter_val, length_val = zip(*X_val)
+# name_test, name_reversed_test, first_letter_test, last_letter_test, length_test = zip(*X_test)
+
+# # Convert tuples to numpy arrays
+# name_train = np.array(name_train)
+# name_reversed_train = np.array(name_reversed_train)
+# first_letter_train = np.array(first_letter_train)
+# last_letter_train = np.array(last_letter_train)
+# length_train = np.array(length_train)
+
+# name_val = np.array(name_val)
+# name_reversed_val = np.array(name_reversed_val)
+# first_letter_val = np.array(first_letter_val)
+# last_letter_val = np.array(last_letter_val)
+# length_val = np.array(length_val)
+
+# name_test = np.array(name_test)
+# name_reversed_test = np.array(name_reversed_test)
+# first_letter_test = np.array(first_letter_test)
+# last_letter_test = np.array(last_letter_test)
+# length_test = np.array(length_test)
+
+# # Reshape the length arrays to have two dimensions
+# length_train = length_train.reshape(-1, 1)
+# length_val = length_val.reshape(-1, 1)
+# length_test = length_test.reshape(-1, 1)
+
+# # Concatenate the features
+# X_train = np.concatenate([name_train, name_reversed_train, first_letter_train, last_letter_train, length_train], axis=1)
+# X_val = np.concatenate([name_val, name_reversed_val, first_letter_val, last_letter_val, length_val], axis=1)
+# X_test = np.concatenate([name_test,name_reversed_test ,first_letter_test, last_letter_test, length_test], axis=1)
+
 y = df['sex'].values
 name_length = df['name_length'].values
-X = list(zip(padded_sequences, name_reversed, first_letter_encoded_scaled, last_letter_encoded_scaled, name_length))
+X = list(zip(padded_sequences, first_letter_encoded_scaled, last_letter_encoded_scaled, name_length))
 
 # Define the size for the test and validation sets as percentages
 test_size_percentage = 0.1
@@ -90,25 +150,22 @@ print(f"Validation set size: {len(X_val)}, Labels: {len(y_val)}")
 print(f"Test set size: {len(X_test)}, Labels: {len(y_test)}")
 
 # Unpack the training data into separate arrays for each input
-name_train, name_reversed_train, first_letter_train, last_letter_train, length_train = zip(*X_train)
-name_val, name_reversed_val, first_letter_val, last_letter_val, length_val = zip(*X_val)
-name_test, name_reversed_test, first_letter_test, last_letter_test, length_test = zip(*X_test)
+name_train, first_letter_train, last_letter_train, length_train = zip(*X_train)
+name_val, first_letter_val, last_letter_val, length_val = zip(*X_val)
+name_test, first_letter_test, last_letter_test, length_test = zip(*X_test)
 
 # Convert tuples to numpy arrays
 name_train = np.array(name_train)
-name_reversed_train = np.array(name_reversed_train)
 first_letter_train = np.array(first_letter_train)
 last_letter_train = np.array(last_letter_train)
 length_train = np.array(length_train)
 
 name_val = np.array(name_val)
-name_reversed_val = np.array(name_reversed_val)
 first_letter_val = np.array(first_letter_val)
 last_letter_val = np.array(last_letter_val)
 length_val = np.array(length_val)
 
 name_test = np.array(name_test)
-name_reversed_test = np.array(name_reversed_test)
 first_letter_test = np.array(first_letter_test)
 last_letter_test = np.array(last_letter_test)
 length_test = np.array(length_test)
@@ -119,31 +176,31 @@ length_val = length_val.reshape(-1, 1)
 length_test = length_test.reshape(-1, 1)
 
 # Concatenate the features
-X_train = np.concatenate([name_train, name_reversed_train, first_letter_train, last_letter_train, length_train], axis=1)
-X_val = np.concatenate([name_val, name_reversed_val, first_letter_val, last_letter_val, length_val], axis=1)
-X_test = np.concatenate([name_test,name_reversed_test ,first_letter_test, last_letter_test, length_test], axis=1)
+X_train = np.concatenate([name_train, first_letter_train, last_letter_train, length_train], axis=1)
+X_val = np.concatenate([name_val, first_letter_val, last_letter_val, length_val], axis=1)
+X_test = np.concatenate([name_test, first_letter_test, last_letter_test, length_test], axis=1)
 
 def objective(trial):
 
     start_time = time.time()  # Start time measurement
 
-    # Hyperparameters to be tuned by Optuna
     param = {
-        'objective': 'binary:logistic',
-        'eval_metric': 'logloss',
-        'use_label_encoder': False,
-        'lambda': trial.suggest_loguniform('lambda', 1e-8, 6.0),
-        'alpha': trial.suggest_loguniform('alpha', 1e-8, 3.0),
-        'colsample_bytree': trial.suggest_float('colsample_bytree', 0.5, 1.0),
-        'subsample': trial.suggest_float('subsample', 0.6, 1.0),
-        'learning_rate': trial.suggest_float('learning_rate', 0.01, 0.1),
-        'n_estimators': trial.suggest_int('n_estimators', 75, 220),
-        'max_depth': trial.suggest_int('max_depth', 7, 17),
-        'min_child_weight': trial.suggest_int('min_child_weight', 1, 300),
-        'gamma': trial.suggest_loguniform('gamma', 1e-8, 1.0),
-        'scale_pos_weight': trial.suggest_float('scale_pos_weight', 1, 20),
-        'early_stopping_rounds':trial.suggest_int('early_stopping_rounds', 15, 60)
-    }
+    'objective': 'binary:logistic',
+    'eval_metric': 'logloss',
+    'use_label_encoder': False,
+    'lambda': trial.suggest_loguniform('lambda', 1e-5, 10.0),  # Wider range for L2 regularization
+    'alpha': trial.suggest_loguniform('alpha', 1e-5, 5.0),  # Wider range for L1 regularization
+    'colsample_bytree': trial.suggest_float('colsample_bytree', 0.3, 1.0),  # Start from a lower value
+    'subsample': trial.suggest_float('subsample', 0.5, 1.0),  # Expanded to include lower subsampling
+    'learning_rate': trial.suggest_loguniform('learning_rate', 0.005, 0.2),  # Using log scale for finer tuning
+    'n_estimators': trial.suggest_int('n_estimators', 100, 1000),  # Wider range for more flexibility
+    'max_depth': trial.suggest_int('max_depth', 3, 20),  # Wider range to explore more depth options
+    'min_child_weight': trial.suggest_int('min_child_weight', 0, 500),  # Expanded range
+    'gamma': trial.suggest_loguniform('gamma', 1e-5, 5.0),  # Wider range for minimum loss reduction
+    'scale_pos_weight': trial.suggest_float('scale_pos_weight', 0.1, 100),  # Wider range for imbalance handling
+    'early_stopping_rounds': trial.suggest_int('early_stopping_rounds', 10, 100)  # Wider range for early stopping
+}
+
 
     # Initialize XGBoost with hyperparameters
     xgb_model = xgb.XGBClassifier(**param)
@@ -165,7 +222,7 @@ def objective(trial):
 
 # Create a study object and optimize the objective function
 study = optuna.create_study(direction='minimize')
-study.optimize(objective, n_trials=1);
+study.optimize(objective, n_trials=2000);
 
 # Best hyperparameters
 print('Number of finished trials:', len(study.trials))
